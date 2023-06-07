@@ -6,6 +6,7 @@ namespace CADDD.WebAPI.Controllers;
 
 [ApiController]
 [Route("auth")]
+//[ErrorHandlingFilter]
 public class AuthenticationController : ControllerBase
 {
     private readonly IAuthenticationService _authService;
