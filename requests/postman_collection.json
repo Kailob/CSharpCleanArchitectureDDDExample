@@ -64,6 +64,46 @@
 					"response": []
 				}
 			]
+		},
+		{
+			"name": "Projects",
+			"item": [
+				{
+					"name": "List",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{BearerToken}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"email@domain.com\",\r\n    \"password\": \"password\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BaseUrl}}/projects",
+							"host": [
+								"{{BaseUrl}}"
+							],
+							"path": [
+								"projects"
+							]
+						}
+					},
+					"response": []
+				}
+			]
 		}
 	],
 	"event": [
@@ -94,7 +134,7 @@
 		},
 		{
 			"key": "BearerToken",
-			"value": "",
+			"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJjNWVkMjA3ZS01YmRhLTRiNjktYjRhNC1kZjIzY2Y0YjRmMTUiLCJnaXZlbl9uYW1lIjoiRmlzdCIsImZhbWlseV9uYW1lIjoiTGFzdCIsImp0aSI6IjA2OWM2ZDFhLTM1YmYtNGQxYS05MjE5LTI0MTdiMGRlNTdlYSIsImV4cCI6MTY4NjE4NDAyNSwiaXNzIjoiQ0FEREQiLCJhdWQiOiJDQURERCJ9.YzQ-wPC0CVsv_EQ_GF18_UcOW5sj2jC-uRUw3kk4Sj8",
 			"type": "string"
 		}
 	]
