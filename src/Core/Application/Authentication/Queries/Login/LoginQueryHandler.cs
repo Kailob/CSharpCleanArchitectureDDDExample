@@ -6,7 +6,7 @@ using CADDD.Domain.Entities;
 using ErrorOr;
 using MediatR;
 
-namespace CADDD.Application.Authentication.Queries.Register;
+namespace CADDD.Application.Authentication.Queries.Login;
 
 public class LoginQueryHandler :
     IRequestHandler<LoginQuery, ErrorOr<AuthenticationResult>>

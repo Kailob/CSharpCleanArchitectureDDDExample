@@ -1,6 +1,6 @@
 ﻿using CADDD.Application.Authentication.Commands.Register;
 using CADDD.Application.Authentication.Common;
-using CADDD.Application.Authentication.Queries.Register;
+using CADDD.Application.Authentication.Queries.Login;
 using CADDD.Contracts.Authentication;
 using Mapster;
 

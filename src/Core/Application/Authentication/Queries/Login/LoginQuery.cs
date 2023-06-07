@@ -2,7 +2,7 @@
 using ErrorOr;
 using MediatR;
 
-namespace CADDD.Application.Authentication.Queries.Register;
+namespace CADDD.Application.Authentication.Queries.Login;
 
 public record LoginQuery(
     string Email,
