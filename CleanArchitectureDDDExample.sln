@@ -36,6 +36,11 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "authentication", "authentic
 		requests\Authentication\Register.http = requests\Authentication\Register.http
 	EndProjectSection
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "projects", "projects", "{E2963ADC-693C-4D38-ADDF-BDEDCBE53754}"
+	ProjectSection(SolutionItems) = preProject
+		requests\projects\ListProjects.http = requests\projects\ListProjects.http
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -75,6 +80,7 @@ Global
 		{06EBB3BD-FCF6-4807-8603-5F253A006C03} = {19A34660-1C40-452F-9B21-CC0D43B8F192}
 		{F7F8DB24-6306-4979-9A15-449D7412D48A} = {7C29C00F-C35E-48B7-8074-67F9A710D0B7}
 		{67FFABC3-9A07-419A-B66B-C7E6867DE265} = {21E8F80B-662E-42E6-8288-4AE41C5F104F}
+		{E2963ADC-693C-4D38-ADDF-BDEDCBE53754} = {21E8F80B-662E-42E6-8288-4AE41C5F104F}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {FC0D4948-499B-4EC5-A02A-407393084CAD}
