@@ -1,6 +1,6 @@
 using CADDD.Domain.Entities;
 
-namespace CADDD.Application.Services.Authentication;
+namespace CADDD.Application.Authentication.Common;
 
 public record AuthenticationResult(
     User User,

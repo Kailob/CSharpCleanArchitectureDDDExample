@@ -1,7 +1,10 @@
-using CADDD.Application.Services.Authentication;
+using CADDD.Application.Authentication.Commands.Register;
+using CADDD.Application.Authentication.Common;
+using CADDD.Application.Authentication.Queries.Register;
 using CADDD.Contracts.Authentication;
 using CADDD.Domain.Common.Errors;
 using ErrorOr;
+using MediatR;
 using Microsoft.AspNetCore.Mvc;
 
 namespace CADDD.WebAPI.Controllers;
@@ -10,26 +13,27 @@ namespace CADDD.WebAPI.Controllers;
 [Route("auth")]
 public class AuthenticationController : ApiController
 {
-    private readonly IAuthenticationService _authService;
-
-    public AuthenticationController(IAuthenticationService authService)
+    private readonly ISender _mediator;
+    public AuthenticationController(ISender mediator)
     {
-        _authService = authService;
+        _mediator = mediator;
     }
-    [Route("register")]
-    public IActionResult Register(RegisterRequest request)
+    [HttpPost("register")]
+    public async Task<IActionResult> Register(RegisterRequest request)
     {
-        ErrorOr<AuthenticationResult> authResult = _authService.Register(request.FirstName, request.LastName, request.Email, request.Password);
+        var command = new RegisterCommand(request.FirstName, request.LastName, request.Email, request.Password);
+        ErrorOr<AuthenticationResult> authResult = await _mediator.Send(command);
 
         return authResult.Match(
             authResult => Ok(MappAuthResult(authResult)),
             errors => Problem(errors)
         );
     }
-    [Route("login")]
-    public IActionResult Login(LoginRequest request)
+    [HttpPost("login")]
+    public async Task<IActionResult> Login(LoginRequest request)
     {
-        ErrorOr<AuthenticationResult> authResult = _authService.Login(request.Email, request.Password);
+        var query = new LoginQuery(request.Email, request.Password);
+        ErrorOr<AuthenticationResult> authResult = await _mediator.Send(query);
 
         if (authResult.IsError && authResult.FirstError == Errors.Authentication.InvalidCredentials) { 
             return Problem(
