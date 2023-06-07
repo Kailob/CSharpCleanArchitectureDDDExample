@@ -1,6 +1,8 @@
+using CADDD.Domain.Entities;
+
 namespace CADDD.Application.Common.Interfaces.Authentication;
 
 public interface IJwTokenGenerator
 {
-    string GenerateToken(Guid userId, string firstName, string lastName);
+    string GenerateToken(User user);
 }

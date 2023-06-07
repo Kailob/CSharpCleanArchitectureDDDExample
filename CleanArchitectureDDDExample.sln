@@ -22,6 +22,7 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "docs", "docs", "{4C307CEF-B62E-46BD-8C17-2B0134381877}"
 	ProjectSection(SolutionItems) = preProject
 		docs\Api.md = docs\Api.md
+		docs\DomainModels.md = docs\DomainModels.md
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "requests", "requests", "{21E8F80B-662E-42E6-8288-4AE41C5F104F}"
