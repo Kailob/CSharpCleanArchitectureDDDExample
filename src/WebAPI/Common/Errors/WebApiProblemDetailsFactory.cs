@@ -4,7 +4,7 @@ using Microsoft.AspNetCore.Mvc.ModelBinding;
 using Microsoft.Extensions.Options;
 using System.Diagnostics;
 
-namespace CADDD.WebAPI.Errors;
+namespace CADDD.WebAPI.Common.Errors;
 
 public class WebApiProblemDetailsFactory : ProblemDetailsFactory
 {

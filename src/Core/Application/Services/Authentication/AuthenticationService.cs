@@ -1,3 +1,4 @@
+using CADDD.Application.Common.Errors;
 using CADDD.Application.Common.Interfaces.Authentication;
 using CADDD.Application.Common.Interfaces.Persistence;
 using CADDD.Domain.Entities;
@@ -18,7 +19,7 @@ public class AuthenticationService: IAuthenticationService
     public AuthenticationResult Register(string firstName, string lastName, string email, string password){
         // Check if user already exists
         if (_userRepository.GetUserByEmail(email) is not null) {
-            throw new Exception("User with given email already exists");
+            throw new DuplicateEmailException();
         }
 
         // Create User (generate unique ID) 
