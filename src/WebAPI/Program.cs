@@ -1,5 +1,6 @@
 using CADDD.Application;
 using CADDD.Infrastructure;
+using CADDD.WebAPI;
 using CADDD.WebAPI.Common.Errors;
 using Microsoft.AspNetCore.Mvc.Infrastructure;
 
@@ -7,10 +8,8 @@ var builder = WebApplication.CreateBuilder(args);
 {
     builder.Services
         .AddApplication()
-        .AddInfrastructure(builder.Configuration);
-    builder.Services.AddControllers();
-    builder.Services.AddRouting(options => options.LowercaseUrls = true);
-    builder.Services.AddSingleton<ProblemDetailsFactory, WebApiProblemDetailsFactory>();
+        .AddInfrastructure(builder.Configuration)
+        .AddPresentation();
 }
 
 var app = builder.Build();
