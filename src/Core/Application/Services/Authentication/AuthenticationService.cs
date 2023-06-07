@@ -1,7 +1,8 @@
-using CADDD.Application.Common.Errors;
 using CADDD.Application.Common.Interfaces.Authentication;
 using CADDD.Application.Common.Interfaces.Persistence;
+using CADDD.Domain.Common.Errors;
 using CADDD.Domain.Entities;
+using ErrorOr;
 
 namespace CADDD.Application.Services.Authentication;
 
@@ -16,10 +17,10 @@ public class AuthenticationService: IAuthenticationService
         _userRepository = userRepository;
     }
 
-    public AuthenticationResult Register(string firstName, string lastName, string email, string password){
+    public ErrorOr<AuthenticationResult> Register(string firstName, string lastName, string email, string password){
         // Check if user already exists
         if (_userRepository.GetUserByEmail(email) is not null) {
-            throw new DuplicateEmailException();
+            return Errors.User.DuplicateEmail;
         }
 
         // Create User (generate unique ID) 
@@ -42,17 +43,17 @@ public class AuthenticationService: IAuthenticationService
             token
         );
     }
-    public AuthenticationResult Login(string email, string password) {
+    public ErrorOr<AuthenticationResult> Login(string email, string password) {
         // Check if user already exists
         if (_userRepository.GetUserByEmail(email) is not User user)
         {
-            throw new Exception("User with given email does not exist.");
+            return Errors.Authentication.InvalidCredentials;
         }
 
         // Check if password matches
         if (user.Password != password)
         {
-            throw new Exception("Invalid Password");
+            return new[] { Errors.Authentication.InvalidCredentials };
         }
 
         // Create JwT Token

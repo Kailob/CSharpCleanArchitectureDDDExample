@@ -1,10 +1,5 @@
 ﻿using CADDD.Application.Common.Interfaces.Persistence;
 using CADDD.Domain.Entities;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace CADDD.Infrastructure.Persistence;
 

@@ -1,6 +1,5 @@
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Options;
-//using Microsoft.Extensions.Options.ConfigurationExtensions;
 
 namespace CADDD.Infrastructure.Authentication;
 

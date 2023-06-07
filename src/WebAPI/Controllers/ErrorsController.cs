@@ -1,10 +1,11 @@
-﻿using CADDD.Application.Common.Errors;
+﻿using CADDD.Application.Common.Interfaces.Errors;
 using Microsoft.AspNetCore.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
 
 namespace CADDD.WebAPI.Controllers;
 
-public class ErrorsController : ControllerBase
+[ApiController]
+public class ErrorsController : ApiController
 {
     [Route("/error")]
     public IActionResult Error()

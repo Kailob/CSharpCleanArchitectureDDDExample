@@ -1,13 +1,14 @@
 using CADDD.Application.Services.Authentication;
 using CADDD.Contracts.Authentication;
+using CADDD.Domain.Common.Errors;
+using ErrorOr;
 using Microsoft.AspNetCore.Mvc;
 
 namespace CADDD.WebAPI.Controllers;
 
-[ApiController]
+
 [Route("auth")]
-//[ErrorHandlingFilter]
-public class AuthenticationController : ControllerBase
+public class AuthenticationController : ApiController
 {
     private readonly IAuthenticationService _authService;
 
@@ -15,32 +16,41 @@ public class AuthenticationController : ControllerBase
     {
         _authService = authService;
     }
-
     [Route("register")]
     public IActionResult Register(RegisterRequest request)
     {
-        var authResult = _authService.Register(request.FirstName, request.LastName, request.Email, request.Password);
-        var response = new AuthenticationResponse(
-            authResult.User.Id,
-            authResult.User.FirstName,
-            authResult.User.LastName,
-            authResult.User.Email,
-            authResult.Token
-        );
-        return Ok(response);
-    }
+        ErrorOr<AuthenticationResult> authResult = _authService.Register(request.FirstName, request.LastName, request.Email, request.Password);
 
+        return authResult.Match(
+            authResult => Ok(MappAuthResult(authResult)),
+            errors => Problem(errors)
+        );
+    }
     [Route("login")]
     public IActionResult Login(LoginRequest request)
     {
-        var authResult = _authService.Login(request.Email, request.Password);
-        var response = new AuthenticationResponse(
+        ErrorOr<AuthenticationResult> authResult = _authService.Login(request.Email, request.Password);
+
+        if (authResult.IsError && authResult.FirstError == Errors.Authentication.InvalidCredentials) { 
+            return Problem(
+                statusCode: StatusCodes.Status401Unauthorized,
+                title: authResult.FirstError.Description
+            );
+        }
+
+        return authResult.Match(
+            authResult => Ok(MappAuthResult(authResult)),
+            errors => Problem(errors)
+        );
+    }
+    private static AuthenticationResponse MappAuthResult(AuthenticationResult authResult)
+    {
+        return new AuthenticationResponse(
             authResult.User.Id,
             authResult.User.FirstName,
             authResult.User.LastName,
             authResult.User.Email,
             authResult.Token
         );
-        return Ok(response);
     }
 }
