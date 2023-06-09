@@ -7,6 +7,12 @@
 ## Client
 
 ```csharp
+class Client
+{
+    Client Create();
+    void Update();
+    void Delete();
+}
 
 ```
 

@@ -1,6 +1,8 @@
 {
     "recommendations": [
         "ms-dotnettools.csdevkit",
-        "ms-dotnettools.csharp"
+        "ms-dotnettools.csharp",
+        "hediet.vscode-drawio",
+        "humao.rest-client"
     ]
 }

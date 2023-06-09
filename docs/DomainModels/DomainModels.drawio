@@ -1,6 +1,6 @@
 <mxfile host="65bd71144e">
     <diagram id="X04-IPf44GO-i4eC53aM" name="Page-1">
-        <mxGraphModel dx="1202" dy="719" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+        <mxGraphModel dx="1213" dy="912" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
             <root>
                 <mxCell id="0"/>
                 <mxCell id="1" parent="0"/>
@@ -14,25 +14,25 @@
                     <mxGeometry x="320" y="10" width="120" height="40" as="geometry"/>
                 </mxCell>
                 <mxCell id="12" value="Tenant" style="shape=ext;double=1;rounded=0;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontStyle=1;fontColor=#000000;" parent="1" vertex="1">
-                    <mxGeometry x="180" y="160" width="120" height="40" as="geometry"/>
+                    <mxGeometry x="900" y="10" width="120" height="40" as="geometry"/>
                 </mxCell>
                 <mxCell id="14" value="PhysicalDeviceID" style="shape=ext;double=1;rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontStyle=1;fontColor=#000000;" parent="1" vertex="1">
-                    <mxGeometry x="160" y="210" width="120" height="40" as="geometry"/>
+                    <mxGeometry x="880" y="60" width="120" height="40" as="geometry"/>
                 </mxCell>
                 <mxCell id="15" value="PhysicalDevice" style="shape=ext;double=1;rounded=0;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontStyle=1;fontColor=#000000;" parent="1" vertex="1">
-                    <mxGeometry x="525" y="160" width="120" height="40" as="geometry"/>
+                    <mxGeometry x="320" y="339" width="120" height="40" as="geometry"/>
                 </mxCell>
                 <mxCell id="23" value="TenantId" style="shape=ext;double=1;rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontStyle=1;fontColor=#000000;" parent="1" vertex="1">
-                    <mxGeometry x="880" y="210" width="120" height="40" as="geometry"/>
+                    <mxGeometry x="675" y="389" width="120" height="40" as="geometry"/>
                 </mxCell>
                 <mxCell id="24" value="Module" style="shape=ext;double=1;rounded=0;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontStyle=1;fontColor=#000000;" parent="1" vertex="1">
-                    <mxGeometry x="180" y="320" width="120" height="40" as="geometry"/>
+                    <mxGeometry x="320" y="170" width="120" height="40" as="geometry"/>
                 </mxCell>
                 <mxCell id="25" value="PhysicalDeviceId" style="shape=ext;double=1;rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontStyle=1;fontColor=#000000;" parent="1" vertex="1">
-                    <mxGeometry x="160" y="370" width="120" height="40" as="geometry"/>
+                    <mxGeometry x="300" y="220" width="120" height="40" as="geometry"/>
                 </mxCell>
                 <mxCell id="26" value="Deploy" style="shape=ext;double=1;rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontStyle=1;fontColor=#000000;" parent="1" vertex="1">
-                    <mxGeometry x="740" y="210" width="120" height="40" as="geometry"/>
+                    <mxGeometry x="535" y="389" width="120" height="40" as="geometry"/>
                 </mxCell>
                 <mxCell id="28" value="ClientId" style="shape=ext;double=1;rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontStyle=1;fontColor=#000000;" parent="1" vertex="1">
                     <mxGeometry x="260" y="60" width="120" height="40" as="geometry"/>
@@ -41,43 +41,46 @@
                     <mxGeometry x="390" y="60" width="120" height="40" as="geometry"/>
                 </mxCell>
                 <mxCell id="30" value="Client" style="shape=ext;double=1;rounded=0;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontStyle=1;fontColor=#000000;" parent="1" vertex="1">
-                    <mxGeometry x="350" y="320" width="120" height="40" as="geometry"/>
+                    <mxGeometry x="605" y="10" width="120" height="40" as="geometry"/>
                 </mxCell>
                 <mxCell id="32" value="PhysicalDeviceId" style="shape=ext;double=1;rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontStyle=1;fontColor=#000000;" parent="1" vertex="1">
-                    <mxGeometry x="170" y="220" width="120" height="40" as="geometry"/>
+                    <mxGeometry x="890" y="70" width="120" height="40" as="geometry"/>
                 </mxCell>
                 <mxCell id="34" value="Camera" style="shape=ext;double=1;rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontStyle=1;fontColor=#000000;" parent="1" vertex="1">
-                    <mxGeometry x="450" y="210" width="120" height="40" as="geometry"/>
+                    <mxGeometry x="245" y="389" width="120" height="40" as="geometry"/>
                 </mxCell>
                 <mxCell id="37" value="TenantId" style="shape=ext;double=1;rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontStyle=1;fontColor=#000000;" parent="1" vertex="1">
-                    <mxGeometry x="330" y="370" width="120" height="40" as="geometry"/>
+                    <mxGeometry x="585" y="60" width="120" height="40" as="geometry"/>
                 </mxCell>
                 <mxCell id="39" value="Global Entity" style="shape=ext;double=1;rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontStyle=1;fontColor=#000000;" parent="1" vertex="1">
                     <mxGeometry x="40" y="110" width="120" height="40" as="geometry"/>
                 </mxCell>
                 <mxCell id="40" value="Deploy" style="shape=ext;double=1;rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontStyle=1;fontColor=#000000;" parent="1" vertex="1">
-                    <mxGeometry x="750" y="220" width="120" height="40" as="geometry"/>
+                    <mxGeometry x="545" y="399" width="120" height="40" as="geometry"/>
                 </mxCell>
-                <mxCell id="41" value="TenantId" style="shape=ext;double=1;rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontStyle=1;fontColor=#000000;" vertex="1" parent="1">
-                    <mxGeometry x="340" y="380" width="120" height="40" as="geometry"/>
+                <mxCell id="41" value="TenantId" style="shape=ext;double=1;rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontStyle=1;fontColor=#000000;" parent="1" vertex="1">
+                    <mxGeometry x="595" y="70" width="120" height="40" as="geometry"/>
                 </mxCell>
-                <mxCell id="42" value="PhysicalDeviceId" style="shape=ext;double=1;rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontStyle=1;fontColor=#000000;" vertex="1" parent="1">
-                    <mxGeometry x="170" y="380" width="120" height="40" as="geometry"/>
+                <mxCell id="42" value="PhysicalDeviceId" style="shape=ext;double=1;rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontStyle=1;fontColor=#000000;" parent="1" vertex="1">
+                    <mxGeometry x="310" y="230" width="120" height="40" as="geometry"/>
                 </mxCell>
-                <mxCell id="43" value="Onboard" style="shape=ext;double=1;rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontStyle=1;fontColor=#000000;" vertex="1" parent="1">
-                    <mxGeometry x="1010" y="210" width="120" height="40" as="geometry"/>
+                <mxCell id="43" value="Onboard" style="shape=ext;double=1;rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontStyle=1;fontColor=#000000;" parent="1" vertex="1">
+                    <mxGeometry x="805" y="389" width="120" height="40" as="geometry"/>
                 </mxCell>
-                <mxCell id="44" value="Camera" style="shape=ext;double=1;rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontStyle=1;fontColor=#000000;" vertex="1" parent="1">
-                    <mxGeometry x="460" y="220" width="120" height="40" as="geometry"/>
+                <mxCell id="44" value="Camera" style="shape=ext;double=1;rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontStyle=1;fontColor=#000000;" parent="1" vertex="1">
+                    <mxGeometry x="255" y="399" width="120" height="40" as="geometry"/>
                 </mxCell>
-                <mxCell id="45" value="DeviceModule" style="shape=ext;double=1;rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontStyle=1;fontColor=#000000;" vertex="1" parent="1">
-                    <mxGeometry x="590" y="210" width="120" height="40" as="geometry"/>
+                <mxCell id="45" value="DeviceModule" style="shape=ext;double=1;rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontStyle=1;fontColor=#000000;" parent="1" vertex="1">
+                    <mxGeometry x="385" y="389" width="120" height="40" as="geometry"/>
                 </mxCell>
-                <mxCell id="47" value="DeviceModule" style="shape=ext;double=1;rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontStyle=1;fontColor=#000000;" vertex="1" parent="1">
-                    <mxGeometry x="600" y="220" width="120" height="40" as="geometry"/>
+                <mxCell id="47" value="DeviceModule" style="shape=ext;double=1;rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontStyle=1;fontColor=#000000;" parent="1" vertex="1">
+                    <mxGeometry x="395" y="399" width="120" height="40" as="geometry"/>
                 </mxCell>
-                <mxCell id="48" value="DeviceModuleId" style="shape=ext;double=1;rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontStyle=1;fontColor=#000000;" vertex="1" parent="1">
-                    <mxGeometry x="570" y="270" width="120" height="40" as="geometry"/>
+                <mxCell id="48" value="ModuleId" style="shape=ext;double=1;rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontStyle=1;fontColor=#000000;" parent="1" vertex="1">
+                    <mxGeometry x="350" y="449" width="120" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="49" value="UserId" style="shape=ext;double=1;rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontStyle=1;fontColor=#000000;" vertex="1" parent="1">
+                    <mxGeometry x="725" y="60" width="120" height="40" as="geometry"/>
                 </mxCell>
             </root>
         </mxGraphModel>
