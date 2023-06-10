@@ -3,16 +3,16 @@ using CADDD.Domain.Common.Models;
 
 namespace CADDD.Domain.PhysicalDevice.ValueObjects;
 
-public sealed class IoTHubDeviceId : ValueObject
+public sealed class IoTDeviceId : ValueObject
 {
     public Guid Value { get; }
 
-    private IoTHubDeviceId(Guid value)
+    private IoTDeviceId(Guid value)
     {
         Value = value;
     }
 
-    public static IoTHubDeviceId CreateUnique()
+    public static IoTDeviceId CreateUnique()
     {
         return new(Guid.NewGuid());
     }

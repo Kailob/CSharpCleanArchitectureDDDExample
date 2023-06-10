@@ -13,7 +13,7 @@ public abstract class Entity<TId> : IEquatable<Entity<TId>>
 
     protected static bool EqualOperator(Entity<TId> left, Entity<TId> right)
     {
-        if (ReferenceEquals(left, null) ^ ReferenceEquals(right, null))
+        if (left is null ^ right is null)
         {
             return false;
         }
@@ -22,7 +22,7 @@ public abstract class Entity<TId> : IEquatable<Entity<TId>>
 
     protected static bool NotEqualOperator(Entity<TId> left, Entity<TId> right)
     {
-        return !(EqualOperator(left, right));
+        return !EqualOperator(left, right);
     }
 
     public override bool Equals(object? obj)

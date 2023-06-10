@@ -3,16 +3,16 @@ using CADDD.Domain.Common.Models;
 
 namespace CADDD.Domain.PhysicalDevice.ValueObjects;
 
-public sealed class SoftwareInstallationId : ValueObject
+public sealed class SoftwareId : ValueObject
 {
     public Guid Value { get; }
 
-    private SoftwareInstallationId(Guid value)
+    private SoftwareId(Guid value)
     {
         Value = value;
     }
 
-    public static SoftwareInstallationId CreateUnique()
+    public static SoftwareId CreateUnique()
     {
         return new(Guid.NewGuid());
     }

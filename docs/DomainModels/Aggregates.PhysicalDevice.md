@@ -2,7 +2,13 @@
 
 
 - [Physical Device](#physical-device)
+- [Meta Data](#meta-data)
+- [IoT Device](#iot-device)
+- [Software](#software)
 - [Device Module](#device-module)
+- [Camera](#camera)
+- [Deploy](#deploy)
+
 
 
 ## Physical Device
@@ -46,7 +52,7 @@ class PhysicalDevice
         "name": "IoTHubDeviceName",
         "createdDateTime": "2023-01-01T00:00:00.0000000Z",
     },
-    "softwareInstallation": {
+    "software": {
         "id": "00000000-0000-0000-0000-000000000000",
         "status": 0,
         "log": "",
@@ -102,7 +108,70 @@ class PhysicalDevice
 }
 ```
 
-## Device Module
+## Meta Data
+
+```csharp
+class MetaData
+{
+    MetaData Create();
+    void Update();
+    void Delete();
+}
+```
+
+```json
+{
+    "id": "00000000-0000-0000-0000-000000000000",
+    "macAddress": "96:fa:95:1d:67:4a",
+    "ip": "192.158.1.38",
+    "username": "deviceUserName",
+    "password": "devicepassword",
+    "LinuxOS": 0,
+}
+```
+
+## IoT Device
+
+```csharp
+class IoTDevice
+{
+    IoTDevice Create();
+    void Update();
+    void Delete();
+}
+```
+
+```json
+{
+    "id": "00000000-0000-0000-0000-000000000000",
+    "status": 0,
+    "name": "IoTHubDeviceName",
+    "createdDateTime": "2023-01-01T00:00:00.0000000Z",
+}
+```
+
+## Software
+
+```csharp
+class Software
+{
+    Software Create();
+    void Update();
+    void Delete();
+}
+```
+
+```json
+{
+    "id": "00000000-0000-0000-0000-000000000000",
+    "status": 0,
+    "log": "",
+    "createdDateTime": "2023-01-01T00:00:00.0000000Z",
+    "updatedDateTime": "2023-01-01T00:00:00.0000000Z"
+}
+```
+
+## Device Camera
 
 ```csharp
 class DeviceModule
@@ -120,5 +189,45 @@ class DeviceModule
     "variables": {},
     "createdDateTime": "2023-01-01T00:00:00.0000000Z",
     "updatedDateTime": "2023-01-01T00:00:00.0000000Z"
+}
+```
+
+## Camera
+
+```csharp
+class Camera
+{
+    Camera Create();
+    void Update();
+    void Delete();
+}
+```
+
+```json
+{
+    "id": "00000000-0000-0000-0000-000000000000",
+    "name": "Camera Name",
+    "description": "Camera Description",
+    "createdDateTime": "2023-01-01T00:00:00.0000000Z",
+    "updatedDateTime": "2023-01-01T00:00:00.0000000Z"
+}
+```
+
+## Deploy
+
+```csharp
+class Deploy
+{
+    Deploy Create();
+    void Update();
+    void Delete();
+}
+```
+
+```json
+{
+    "id": "00000000-0000-0000-0000-000000000000",
+    "manifest": {},
+    "createdDateTime": "2023-01-01T00:00:00.0000000Z",
 }
 ```

@@ -1,6 +1,6 @@
 <mxfile host="65bd71144e">
     <diagram id="X04-IPf44GO-i4eC53aM" name="Page-1">
-        <mxGraphModel dx="1213" dy="912" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+        <mxGraphModel dx="1245" dy="462" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
             <root>
                 <mxCell id="0"/>
                 <mxCell id="1" parent="0"/>
@@ -37,7 +37,7 @@
                 <mxCell id="28" value="ClientId" style="shape=ext;double=1;rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontStyle=1;fontColor=#000000;" parent="1" vertex="1">
                     <mxGeometry x="260" y="60" width="120" height="40" as="geometry"/>
                 </mxCell>
-                <mxCell id="29" value="Admin" style="shape=ext;double=1;rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontStyle=1;fontColor=#000000;" parent="1" vertex="1">
+                <mxCell id="29" value="AdminId" style="shape=ext;double=1;rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontStyle=1;fontColor=#000000;" parent="1" vertex="1">
                     <mxGeometry x="390" y="60" width="120" height="40" as="geometry"/>
                 </mxCell>
                 <mxCell id="30" value="Client" style="shape=ext;double=1;rounded=0;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontStyle=1;fontColor=#000000;" parent="1" vertex="1">
@@ -52,7 +52,7 @@
                 <mxCell id="37" value="TenantId" style="shape=ext;double=1;rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontStyle=1;fontColor=#000000;" parent="1" vertex="1">
                     <mxGeometry x="585" y="60" width="120" height="40" as="geometry"/>
                 </mxCell>
-                <mxCell id="39" value="Global Entity" style="shape=ext;double=1;rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontStyle=1;fontColor=#000000;" parent="1" vertex="1">
+                <mxCell id="39" value="Entity" style="shape=ext;double=1;rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontStyle=1;fontColor=#000000;" parent="1" vertex="1">
                     <mxGeometry x="40" y="110" width="120" height="40" as="geometry"/>
                 </mxCell>
                 <mxCell id="40" value="Deploy" style="shape=ext;double=1;rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontStyle=1;fontColor=#000000;" parent="1" vertex="1">
@@ -64,7 +64,7 @@
                 <mxCell id="42" value="PhysicalDeviceId" style="shape=ext;double=1;rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontStyle=1;fontColor=#000000;" parent="1" vertex="1">
                     <mxGeometry x="310" y="230" width="120" height="40" as="geometry"/>
                 </mxCell>
-                <mxCell id="43" value="Onboard" style="shape=ext;double=1;rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontStyle=1;fontColor=#000000;" parent="1" vertex="1">
+                <mxCell id="43" value="IoTDevice" style="shape=ext;double=1;rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontStyle=1;fontColor=#000000;" parent="1" vertex="1">
                     <mxGeometry x="805" y="389" width="120" height="40" as="geometry"/>
                 </mxCell>
                 <mxCell id="44" value="Camera" style="shape=ext;double=1;rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontStyle=1;fontColor=#000000;" parent="1" vertex="1">
@@ -79,8 +79,20 @@
                 <mxCell id="48" value="ModuleId" style="shape=ext;double=1;rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontStyle=1;fontColor=#000000;" parent="1" vertex="1">
                     <mxGeometry x="350" y="449" width="120" height="40" as="geometry"/>
                 </mxCell>
-                <mxCell id="49" value="UserId" style="shape=ext;double=1;rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontStyle=1;fontColor=#000000;" vertex="1" parent="1">
+                <mxCell id="49" value="UserId" style="shape=ext;double=1;rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontStyle=1;fontColor=#000000;" parent="1" vertex="1">
                     <mxGeometry x="725" y="60" width="120" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="50" value="Admin" style="shape=ext;double=1;rounded=0;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontStyle=1;fontColor=#000000;" vertex="1" parent="1">
+                    <mxGeometry x="605" y="160" width="120" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="53" value="UserId" style="shape=ext;double=1;rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontStyle=1;fontColor=#000000;" vertex="1" parent="1">
+                    <mxGeometry x="585" y="210" width="120" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="54" value="MetaData" style="shape=ext;double=1;rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontStyle=1;fontColor=#000000;" vertex="1" parent="1">
+                    <mxGeometry x="110" y="389" width="120" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="55" value="Software" style="shape=ext;double=1;rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontStyle=1;fontColor=#000000;" vertex="1" parent="1">
+                    <mxGeometry x="930" y="389" width="120" height="40" as="geometry"/>
                 </mxCell>
             </root>
         </mxGraphModel>

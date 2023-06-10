@@ -16,8 +16,8 @@ public sealed class PhysicalDevice : AggregateRoot<PhysicalDeviceId>
     public EntityStatus Status { get; }
     public TenantId TenantId { get; }
     public MetaData MetaData { get; }
-    public IoTHubDevice IoTHubDevice { get; }
-    public SoftwareInstallation SoftwareInstallation { get; }
+    public IoTDevice IoTDevice { get; }
+    public Software Software { get; }
     public IReadOnlyList<DeviceModule> DeviceModules => _deviceModules.AsReadOnly();
     public IReadOnlyList<Camera> Cameras => _cameras.AsReadOnly();
     public IReadOnlyList<Deploy> Deploys => _deploys.AsReadOnly();
@@ -30,8 +30,8 @@ public sealed class PhysicalDevice : AggregateRoot<PhysicalDeviceId>
         EntityStatus status,
         TenantId tenantId,
         MetaData metaData,
-        IoTHubDevice iotHubDevice,
-        SoftwareInstallation softwareInstallation,
+        IoTDevice iotDevice,
+        Software software,
         DateTime createdDateTime,
         DateTime updatedDateTime
         ) : base(id)
@@ -41,8 +41,8 @@ public sealed class PhysicalDevice : AggregateRoot<PhysicalDeviceId>
         Status = status;
         TenantId = tenantId;
         MetaData = metaData;
-        IoTHubDevice = iotHubDevice;
-        SoftwareInstallation = softwareInstallation;
+        IoTDevice = iotDevice;
+        Software = software;
         TenantId = tenantId;
         CreatedDateTime = createdDateTime;
         UpdatedDateTime = updatedDateTime;
@@ -53,8 +53,8 @@ public sealed class PhysicalDevice : AggregateRoot<PhysicalDeviceId>
         EntityStatus status,
         TenantId tenantId,
         MetaData metaData,
-        IoTHubDevice iotHubDevice,
-        SoftwareInstallation softwareInstallation
+        IoTDevice IoTDevice,
+        Software Software
     )
     {
         return new(
@@ -64,8 +64,8 @@ public sealed class PhysicalDevice : AggregateRoot<PhysicalDeviceId>
             status,
             tenantId,
             metaData,
-            iotHubDevice,
-            softwareInstallation,
+            IoTDevice,
+            Software,
             DateTime.Now,
             DateTime.Now
         );

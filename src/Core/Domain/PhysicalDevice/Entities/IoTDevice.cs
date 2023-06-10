@@ -7,14 +7,14 @@ using CADDD.Domain.PhysicalDevice.ValueObjects;
 
 namespace CADDD.Domain.PhysicalDevice.Entities;
 
-public sealed class IoTHubDevice : Entity<IoTHubDeviceId>
+public sealed class IoTDevice : Entity<IoTDeviceId>
 {
     public string Name { get; }
     public EntityStatus Status { get; }
     public DateTime CreatedDateTime { get; } = DateTime.Now;
 
-    private IoTHubDevice(
-        IoTHubDeviceId id, 
+    private IoTDevice(
+        IoTDeviceId id, 
         string name,
         EntityStatus status
     ) : base(id)
@@ -23,13 +23,13 @@ public sealed class IoTHubDevice : Entity<IoTHubDeviceId>
         Status = status;
     }
 
-    public static IoTHubDevice Create(
+    public static IoTDevice Create(
         string name,
         EntityStatus status
     )
     {
         return new(
-            IoTHubDeviceId.CreateUnique(),
+            IoTDeviceId.CreateUnique(),
             name,
             status
         );
