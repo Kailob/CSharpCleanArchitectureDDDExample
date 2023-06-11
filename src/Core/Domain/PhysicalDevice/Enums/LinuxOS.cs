@@ -1,3 +1,6 @@
+// <copyright file="LinuxOS.cs" company="PlaceholderCompany">
+// Copyright (c) PlaceholderCompany. All rights reserved.
+// </copyright>
 using System.ComponentModel;
 
 namespace CADDD.Domain.PhysicalDevice.Enums;

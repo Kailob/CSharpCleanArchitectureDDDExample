@@ -11,5 +11,5 @@ public enum EntityStatus
     Active,
 
     [Description("Deleted")]
-    Deleted
+    Deleted,
 }

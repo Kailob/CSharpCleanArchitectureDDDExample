@@ -4,12 +4,12 @@ namespace CADDD.Domain.Admin.ValueObjects;
 
 public sealed class AdminId : ValueObject
 {
-    public Guid Value { get; }
-
     private AdminId(Guid value)
     {
         Value = value;
     }
+
+    public Guid Value { get; }
 
     public static AdminId CreateUnique()
     {

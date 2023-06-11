@@ -1,6 +1,6 @@
-
-
-
+// <copyright file="Software.cs" company="PlaceholderCompany">
+// Copyright (c) PlaceholderCompany. All rights reserved.
+// </copyright>
 using CADDD.Domain.Common.Enums;
 using CADDD.Domain.Common.Models;
 using CADDD.Domain.PhysicalDevice.Enums;
@@ -10,31 +10,32 @@ namespace CADDD.Domain.PhysicalDevice.Entities;
 
 public sealed class Software : Entity<SoftwareId>
 {
-    public string Log { get; }
-    public ExecutionStatus Status { get; }
-    public DateTime CreatedDateTime { get; } = DateTime.Now;
-    public DateTime UpdatedDateTime { get; } = DateTime.Now;
-
     private Software(
         SoftwareId id,
         string log,
-        ExecutionStatus status
-    ) : base(id)
+        ExecutionStatus status)
+         : base(id)
     {
         Log = log;
         Status = status;
     }
 
+    public string Log { get; }
+
+    public ExecutionStatus Status { get; }
+
+    public DateTime CreatedDateTime { get; } = DateTime.Now;
+
+    public DateTime UpdatedDateTime { get; } = DateTime.Now;
+
     public static Software Create(
         string log,
-        ExecutionStatus status
-    )
+        ExecutionStatus status)
     {
         return new(
             SoftwareId.CreateUnique(),
             log,
-            status
-        );
+            status);
     }
 
     /// <summary>
@@ -62,8 +63,7 @@ public sealed class Software : Entity<SoftwareId>
                 break;
         }
 
-
-        //  Remove Microsoft package signing key to device list of trusted keys.
+        // Remove Microsoft package signing key to device list of trusted keys.
         switch (linuxOS)
         {
             case LinuxOS.UbuntuJammyJellyfish:
@@ -80,7 +80,7 @@ public sealed class Software : Entity<SoftwareId>
                 break;
         }
 
-        //  Remove Microsoft package signing key to device list of trusted keys.
+        // Remove Microsoft package signing key to device list of trusted keys.
         switch (linuxOS)
         {
             case LinuxOS.UbuntuJammyJellyfish:
@@ -97,18 +97,24 @@ public sealed class Software : Entity<SoftwareId>
 
         return scripts;
     }
+
     /// <summary>
-    /// Prepares the instalations scripts based on 
+    /// Prepares the instalations scripts based on.
     /// https://learn.microsoft.com/en-us/azure/iot-edge/how-to-provision-single-device-linux-symmetric?view=iotedge-1.4&tabs=azure-portal%2Crhel
     /// </summary>
+    /// <param name="deviceConnectionString">IoT Device Connection String</param>
+    /// <param name="LinuxOS">Device Linux OS</param>
     /// <returns>List<string></returns>
-    public static IReadOnlyList<string> GetInstallScripts(string DeviceConnectionString, LinuxOS linuxOS)
+    public static IReadOnlyList<string> GetInstallScripts(string deviceConnectionString, LinuxOS linuxOS)
     {
-        if (string.IsNullOrEmpty(DeviceConnectionString)) throw new ArgumentNullException(nameof(DeviceConnectionString));
+        if (string.IsNullOrEmpty(deviceConnectionString))
+        {
+            throw new ArgumentNullException(nameof(deviceConnectionString));
+        }
 
         var scripts = GetCleanUpScripts(linuxOS);
 
-        //  Add Microsoft package signing key to device list of trusted keys.
+        // Add Microsoft package signing key to device list of trusted keys.
         switch (linuxOS)
         {
             case LinuxOS.UbuntuJammyJellyfish:
@@ -159,8 +165,7 @@ public sealed class Software : Entity<SoftwareId>
                 break;
         }
 
-
-        //  Add Microsoft package signing key to device list of trusted keys.
+        // Add Microsoft package signing key to device list of trusted keys.
         switch (linuxOS)
         {
             case LinuxOS.UbuntuJammyJellyfish:
@@ -177,28 +182,29 @@ public sealed class Software : Entity<SoftwareId>
                 break;
         }
 
-        //  Provision the device with its cloud identity
-        scripts.Add($"sudo iotedge config mp --connection-string '{DeviceConnectionString}' --force");
+        // Provision the device with its cloud identity
+        scripts.Add($"sudo iotedge config mp --connection-string '{deviceConnectionString}' --force");
 
-        //  Apply the configuration changes
+        // Apply the configuration changes
         scripts.Add("sudo iotedge config apply -c '/etc/aziot/config.toml'");
 
-        //  To view the configuration file, you can open it:
+        // To view the configuration file, you can open it:
         scripts.Add("sudo nano /etc/aziot/config.toml");
 
         return scripts;
     }
+
     /// <summary>
-    /// Prepares the health check scripts based on 
+    /// Prepares the health check scripts based on.
     /// https://learn.microsoft.com/en-us/azure/iot-edge/how-to-provision-single-device-linux-symmetric?view=iotedge-1.4&tabs=azure-portal%2Crhel#verify-successful-configuration
     /// </summary>
     /// <returns>List<string></returns>
     public static List<string> GetHealtCheckScripts()
     {
-        var scripts = new List<string>() {
+        var scripts = new List<string>()
+        {
             "sudo iotedge system status",
-            //"sudo iotedge system logs",
-            "sudo iotedge check --verbose"
+            "sudo iotedge check --verbose",
         };
         return scripts;
     }

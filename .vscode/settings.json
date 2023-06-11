@@ -1,3 +1,6 @@
 {
-    "dotnet.defaultSolution": "CleanArchitectureDDDExample.sln"
+    "dotnet.defaultSolution": "CleanArchitectureDDDExample.sln",
+    "omnisharp.enableEditorConfigSupport": true,
+    "omnisharp.enableRoslynAnalyzers": true,
+    "files.trimTrailingWhitespace": true
 }

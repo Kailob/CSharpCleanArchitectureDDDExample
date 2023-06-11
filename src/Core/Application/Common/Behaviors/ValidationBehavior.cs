@@ -4,7 +4,7 @@ using MediatR;
 
 namespace CADDD.Application.Common.Behaviors;
 
-public class ValidationBehavior<TRequest, TResponse> : 
+public class ValidationBehavior<TRequest, TResponse> :
     IPipelineBehavior<TRequest, TResponse>
     where TRequest : IRequest<TResponse>
     where TResponse : IErrorOr
@@ -17,8 +17,8 @@ public class ValidationBehavior<TRequest, TResponse> :
     }
 
     public async Task<TResponse> Handle(
-        TRequest request, 
-        RequestHandlerDelegate<TResponse> next, 
+        TRequest request,
+        RequestHandlerDelegate<TResponse> next,
         CancellationToken cancellationToken)
     {
         if (_validator is null)
@@ -34,7 +34,7 @@ public class ValidationBehavior<TRequest, TResponse> :
 
         var errors = validationResult.Errors
             .Select(validationFailure => Error.Validation(
-                validationFailure.PropertyName, 
+                validationFailure.PropertyName,
                 validationFailure.ErrorMessage))
             .ToList();
 

@@ -1,28 +1,22 @@
-
 namespace CADDD.Domain.Common.Models;
 
 public abstract class Entity<TId> : IEquatable<Entity<TId>>
     where TId : notnull
 {
-    public TId Id { get; protected set; }
-
     protected Entity(TId id)
     {
         Id = id;
     }
 
-    protected static bool EqualOperator(Entity<TId> left, Entity<TId> right)
-    {
-        if (left is null ^ right is null)
-        {
-            return false;
-        }
-        return ReferenceEquals(left, right) || left.Equals(right);
-    }
+    public TId Id { get; protected set; }
 
-    protected static bool NotEqualOperator(Entity<TId> left, Entity<TId> right)
+    public static bool operator ==(Entity<TId> one, Entity<TId> two) => EqualOperator(one, two);
+
+    public static bool operator !=(Entity<TId> one, Entity<TId> two) => NotEqualOperator(one, two);
+
+    public bool Equals(Entity<TId>? other)
     {
-        return !EqualOperator(left, right);
+        return Equals((object?)other);
     }
 
     public override bool Equals(object? obj)
@@ -35,13 +29,13 @@ public abstract class Entity<TId> : IEquatable<Entity<TId>>
         return Id.GetHashCode();
     }
 
-    public static bool operator ==(Entity<TId> one, Entity<TId> two) => EqualOperator(one, two);
-
-    public static bool operator !=(Entity<TId> one, Entity<TId> two) => NotEqualOperator(one, two);
-
-    public bool Equals(Entity<TId>? other)
+    protected static bool EqualOperator(Entity<TId> left, Entity<TId> right)
     {
-        return Equals( (object?)other );
+        return !(left is null ^ right is null) && (ReferenceEquals(left, right) || (left is not null && left.Equals(right)));
     }
 
+    protected static bool NotEqualOperator(Entity<TId> left, Entity<TId> right)
+    {
+        return !EqualOperator(left, right);
+    }
 }

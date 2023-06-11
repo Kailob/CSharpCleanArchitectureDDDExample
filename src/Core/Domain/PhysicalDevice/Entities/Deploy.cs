@@ -5,25 +5,23 @@ namespace CADDD.Domain.PhysicalDevice.Entities;
 
 public sealed class Deploy : Entity<DeployId>
 {
-    public string Manifest { get; }
-    public DateTime CreatedDateTime { get; } = DateTime.Now;
-
     private Deploy(
-        DeployId id, 
-        string manifest
-    ) : base(id)
+        DeployId id,
+        string manifest)
+        : base(id)
     {
         Manifest = manifest;
     }
 
+    public string Manifest { get; }
+
+    public DateTime CreatedDateTime { get; } = DateTime.Now;
+
     public static Deploy Create(
-        string manifest
-    )
+        string manifest)
     {
         return new(
             DeployId.CreateUnique(),
-            manifest
-        );
-        
+            manifest);
     }
 }

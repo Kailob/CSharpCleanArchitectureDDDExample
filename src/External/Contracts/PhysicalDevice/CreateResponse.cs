@@ -1,9 +1,9 @@
-// <copyright file="AuthenticationResponse.cs" company="PlaceholderCompany">
+// <copyright file="CreateResponse.cs" company="PlaceholderCompany">
 // Copyright (c) PlaceholderCompany. All rights reserved.
 // </copyright>
-namespace CADDD.Contracts.Authentication;
+namespace CADDD.Contracts.PhysicalDevice;
 
-public record AuthenticationResponse(
+public record CreateResponse(
     Guid Id,
     string FirstName,
     string LastName,

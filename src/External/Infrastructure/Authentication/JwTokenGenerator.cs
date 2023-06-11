@@ -25,9 +25,7 @@ public class JwTokenGenerator: IJwTokenGenerator
     public string GenerateToken(User user)
     {
         var signingCredentials = new SigningCredentials(
-            new SymmetricSecurityKey(
-                Encoding.UTF8.GetBytes(_jwtSettings.Secret)
-            ), 
+            new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_jwtSettings.Secret)),
             SecurityAlgorithms.HmacSha256
         );
 
@@ -44,8 +42,7 @@ public class JwTokenGenerator: IJwTokenGenerator
             audience: _jwtSettings.Audience,
             expires: _dateTime.UtcNow.AddMinutes(_jwtSettings.ExpiryMinutes),
             claims: claims,
-            signingCredentials: signingCredentials
-        );
+            signingCredentials: signingCredentials);
 
         return new JwtSecurityTokenHandler().WriteToken(securityToken);
     }

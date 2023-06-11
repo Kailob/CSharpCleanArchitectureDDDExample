@@ -3,6 +3,7 @@
         "ms-dotnettools.csdevkit",
         "ms-dotnettools.csharp",
         "hediet.vscode-drawio",
-        "humao.rest-client"
+        "humao.rest-client",
+        "editorconfig.editorconfig"
     ]
 }

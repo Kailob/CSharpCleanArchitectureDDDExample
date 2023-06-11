@@ -1,16 +1,18 @@
-
+// <copyright file="DeployId.cs" company="PlaceholderCompany">
+// Copyright (c) PlaceholderCompany. All rights reserved.
+// </copyright>
 using CADDD.Domain.Common.Models;
 
 namespace CADDD.Domain.PhysicalDevice.ValueObjects;
 
 public sealed class DeployId : ValueObject
 {
-    public Guid Value { get; }
-
     private DeployId(Guid value)
     {
-        Value = value;
+        this.Value = value;
     }
+
+    public Guid Value { get; }
 
     public static DeployId CreateUnique()
     {
@@ -19,6 +21,6 @@ public sealed class DeployId : ValueObject
 
     protected override IEnumerable<object> GetEqualityComponents()
     {
-        yield return Value;
+        yield return this.Value;
     }
 }

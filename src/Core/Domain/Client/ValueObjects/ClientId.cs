@@ -1,16 +1,15 @@
-
 using CADDD.Domain.Common.Models;
 
 namespace CADDD.Domain.Client.ValueObjects;
 
 public sealed class ClientId : ValueObject
 {
-    public Guid Value { get; }
-
     private ClientId(Guid value)
     {
         Value = value;
     }
+
+    public Guid Value { get; }
 
     public static ClientId CreateUnique()
     {

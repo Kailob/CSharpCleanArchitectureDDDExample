@@ -1,0 +1,274 @@
+<mxfile host="65bd71144e">
+    <diagram id="O5FBtTSr8io8OmdzmH3Q" name="Page-1">
+        <mxGraphModel dx="1245" dy="462" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="4" value="" style="group" parent="1" vertex="1" connectable="0">
+                    <mxGeometry x="10" y="10" width="50" height="90" as="geometry"/>
+                </mxCell>
+                <mxCell id="2" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" parent="4" vertex="1">
+                    <mxGeometry width="50" height="90" as="geometry"/>
+                </mxCell>
+                <mxCell id="3" value="Actor" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;fontColor=#000000;fontStyle=1;strokeColor=#000000;fillColor=#FFFFFF;" parent="4" vertex="1">
+                    <mxGeometry x="10" y="5" width="30" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="5" value="&lt;b&gt;Domain Event&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#BD7000;fillColor=#f0a30a;fontColor=#000000;" parent="1" vertex="1">
+                    <mxGeometry x="70" y="40" width="90" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="7" value="&lt;b&gt;System&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#9673a6;fillColor=#FF66FF;fontColor=#000000;" parent="1" vertex="1">
+                    <mxGeometry x="170" y="40" width="50" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="8" value="&lt;b&gt;Hot Spot&lt;/b&gt;" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#990000;fillColor=#990000;fontColor=#000000;" parent="1" vertex="1">
+                    <mxGeometry x="230" y="40" width="60" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="10" value="&lt;b&gt;Opportunity&lt;/b&gt;" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#66CC00;fillColor=#66CC00;fontColor=#000000;" parent="1" vertex="1">
+                    <mxGeometry x="300" y="40" width="80" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="11" value="&lt;b&gt;Command&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#9999FF;fillColor=#9999FF;fontColor=#000000;" parent="1" vertex="1">
+                    <mxGeometry x="390" y="40" width="65" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="12" value="&lt;b&gt;ReadModel&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#99FF99;fillColor=#99FF99;fontColor=#000000;" parent="1" vertex="1">
+                    <mxGeometry x="464" y="40" width="65" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="13" value="&lt;b&gt;Policy&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#6600CC;fillColor=#6600CC;fontColor=#000000;" parent="1" vertex="1">
+                    <mxGeometry x="537" y="40" width="43" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="16" value="&lt;b&gt;Onboard Device&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#BD7000;fillColor=#f0a30a;fontColor=#000000;" parent="1" vertex="1">
+                    <mxGeometry x="90" y="750" width="100" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="17" value="&lt;b style=&quot;font-size: 16px;&quot;&gt;Device Onboarded&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#BD7000;fillColor=#f0a30a;fontColor=#000000;fontSize=16;" parent="1" vertex="1">
+                    <mxGeometry x="4320" y="140" width="190" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="18" value="&lt;b style=&quot;font-size: 16px;&quot;&gt;Start Onboard&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#9999FF;fillColor=#9999FF;fontColor=#000000;fontSize=16;" parent="1" vertex="1">
+                    <mxGeometry x="910" y="645" width="150" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="19" value="" style="group" parent="1" vertex="1" connectable="0">
+                    <mxGeometry x="860" y="630" width="50" height="90" as="geometry"/>
+                </mxCell>
+                <mxCell id="20" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" parent="19" vertex="1">
+                    <mxGeometry width="50" height="90" as="geometry"/>
+                </mxCell>
+                <mxCell id="21" value="Admin" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;fontColor=#000000;fontStyle=1;strokeColor=#000000;fillColor=#FFFFFF;" parent="19" vertex="1">
+                    <mxGeometry x="10" y="5" width="30" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="22" value="&lt;b&gt;StartUp Script Installed&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#BD7000;fillColor=#f0a30a;fontColor=#000000;" parent="1" vertex="1">
+                    <mxGeometry x="1590" y="692.5" width="150" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="23" value="&lt;b&gt;Device Created In IoTHub&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#BD7000;fillColor=#f0a30a;fontColor=#000000;" parent="1" vertex="1">
+                    <mxGeometry x="1990" y="560" width="160" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="25" value="&lt;b&gt;Modules Gathered&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#BD7000;fillColor=#f0a30a;fontColor=#000000;" parent="1" vertex="1">
+                    <mxGeometry x="2810" y="345" width="170" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="26" value="&lt;b&gt;Physical Device System&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#9673a6;fillColor=#FF66FF;fontColor=#000000;" parent="1" vertex="1">
+                    <mxGeometry x="1060" y="655" width="100" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="27" value="&lt;b&gt;Onboard Request Created&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#BD7000;fillColor=#f0a30a;fontColor=#000000;" parent="1" vertex="1">
+                    <mxGeometry x="1160" y="655" width="110" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="28" value="&lt;b&gt;Onboard ID&lt;br&gt;Onboard Details&lt;br&gt;&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#99FF99;fillColor=#99FF99;fontColor=#000000;" parent="1" vertex="1">
+                    <mxGeometry x="1270" y="635" width="100" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="29" value="&lt;b style=&quot;font-size: 16px;&quot;&gt;Create Physical Device&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#9999FF;fillColor=#9999FF;fontColor=#000000;fontSize=16;" parent="1" vertex="1">
+                    <mxGeometry x="320" y="640" width="150" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="30" value="" style="group" parent="1" vertex="1" connectable="0">
+                    <mxGeometry x="270" y="670" width="50" height="90" as="geometry"/>
+                </mxCell>
+                <mxCell id="31" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" parent="30" vertex="1">
+                    <mxGeometry width="50" height="90" as="geometry"/>
+                </mxCell>
+                <mxCell id="32" value="Admin" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;fontColor=#000000;fontStyle=1;strokeColor=#000000;fillColor=#FFFFFF;" parent="30" vertex="1">
+                    <mxGeometry x="10" y="5" width="30" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="33" value="&lt;b&gt;Physical Device System&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#9673a6;fillColor=#FF66FF;fontColor=#000000;" parent="1" vertex="1">
+                    <mxGeometry x="470" y="690" width="100" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="34" value="&lt;b&gt;Physical Device Created&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#BD7000;fillColor=#f0a30a;fontColor=#000000;" parent="1" vertex="1">
+                    <mxGeometry x="570" y="650" width="120" height="55" as="geometry"/>
+                </mxCell>
+                <mxCell id="35" value="&lt;b&gt;Physical Device&lt;/b&gt;&lt;b&gt;&amp;nbsp;ID&lt;br&gt;&lt;/b&gt;&lt;b&gt;Physical Device&lt;/b&gt;&lt;b&gt;&amp;nbsp;Details&lt;br&gt;&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#99FF99;fillColor=#99FF99;fontColor=#000000;" parent="1" vertex="1">
+                    <mxGeometry x="690" y="657.5" width="150" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="38" value="&lt;b style=&quot;font-size: 16px;&quot;&gt;Start Up Script Upload&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#9999FF;fillColor=#9999FF;fontColor=#000000;fontSize=16;" parent="1" vertex="1">
+                    <mxGeometry x="1340" y="712.5" width="150" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="42" value="&lt;b&gt;Physical Device System&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#9673a6;fillColor=#FF66FF;fontColor=#000000;" parent="1" vertex="1">
+                    <mxGeometry x="1490" y="722.5" width="100" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="43" value="&lt;b&gt;Physical Device Failed&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#BD7000;fillColor=#f0a30a;fontColor=#000000;" parent="1" vertex="1">
+                    <mxGeometry x="570" y="725" width="120" height="55" as="geometry"/>
+                </mxCell>
+                <mxCell id="44" value="&lt;b&gt;What should we do?&lt;/b&gt;" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#990000;fillColor=#990000;fontColor=#000000;perimeterSpacing=100;" parent="1" vertex="1">
+                    <mxGeometry x="690" y="770" width="120" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="46" value="&lt;b&gt;StartUp Script Failed&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#BD7000;fillColor=#f0a30a;fontColor=#000000;" parent="1" vertex="1">
+                    <mxGeometry x="1590" y="757.5" width="150" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="47" value="&lt;b&gt;StartUp Script Policy&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#6600CC;fillColor=#6600CC;fontColor=#000000;" parent="1" vertex="1">
+                    <mxGeometry x="1710" y="797.5" width="90" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="48" value="&lt;b style=&quot;font-size: 16px;&quot;&gt;Nofity Admin&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#9999FF;fillColor=#9999FF;fontColor=#000000;fontSize=16;" parent="1" vertex="1">
+                    <mxGeometry x="1800" y="805" width="120" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="49" value="&lt;b&gt;Email System&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#9673a6;fillColor=#FF66FF;fontColor=#000000;" parent="1" vertex="1">
+                    <mxGeometry x="1870" y="845" width="100" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="50" value="&lt;b&gt;Admin Notified&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#BD7000;fillColor=#f0a30a;fontColor=#000000;" parent="1" vertex="1">
+                    <mxGeometry x="1970" y="845" width="100" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="51" value="&lt;b&gt;Onboard ID&lt;br&gt;Onboard Details&lt;br&gt;&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#99FF99;fillColor=#99FF99;fontColor=#000000;" parent="1" vertex="1">
+                    <mxGeometry x="2070" y="845" width="100" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="54" value="&lt;b style=&quot;font-size: 16px;&quot;&gt;Create Device in IoT Hub&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#9999FF;fillColor=#9999FF;fontColor=#000000;fontSize=16;" parent="1" vertex="1">
+                    <mxGeometry x="1740" y="582.5" width="150" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="58" value="&lt;b&gt;IoT Hub&lt;br&gt;System&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#9673a6;fillColor=#FF66FF;fontColor=#000000;" parent="1" vertex="1">
+                    <mxGeometry x="1890" y="590" width="100" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="59" value="&lt;b&gt;Device Creation in IoTHub&amp;nbsp;&lt;/b&gt;&lt;b&gt;Failed&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#BD7000;fillColor=#f0a30a;fontColor=#000000;" parent="1" vertex="1">
+                    <mxGeometry x="1990" y="625" width="150" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="60" value="&lt;b&gt;IoTDevice ID&lt;br&gt;&lt;/b&gt;&lt;b&gt;IoTDevice&lt;/b&gt;&lt;b&gt;&amp;nbsp;Details&lt;br&gt;&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#99FF99;fillColor=#99FF99;fontColor=#000000;" parent="1" vertex="1">
+                    <mxGeometry x="2150" y="560" width="110" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="61" value="&lt;b&gt;Device Creation in IoTHub&amp;nbsp;&lt;/b&gt;&lt;b&gt;Policy&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#6600CC;fillColor=#6600CC;fontColor=#000000;" parent="1" vertex="1">
+                    <mxGeometry x="2060" y="665" width="110" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="62" value="&lt;b style=&quot;font-size: 16px;&quot;&gt;Nofity Admin&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#9999FF;fillColor=#9999FF;fontColor=#000000;fontSize=16;" parent="1" vertex="1">
+                    <mxGeometry x="2120" y="715" width="120" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="63" value="&lt;b&gt;Email System&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#9673a6;fillColor=#FF66FF;fontColor=#000000;" parent="1" vertex="1">
+                    <mxGeometry x="2190" y="755" width="100" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="64" value="&lt;b&gt;Admin Notified&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#BD7000;fillColor=#f0a30a;fontColor=#000000;" parent="1" vertex="1">
+                    <mxGeometry x="2290" y="755" width="100" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="67" value="&lt;b style=&quot;font-size: 16px;&quot;&gt;Install Software in Physical Device&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#9999FF;fillColor=#9999FF;fontColor=#000000;fontSize=16;" parent="1" vertex="1">
+                    <mxGeometry x="2150" y="453.75" width="150" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="71" value="&lt;b&gt;Physical Device System&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#9673a6;fillColor=#FF66FF;fontColor=#000000;" parent="1" vertex="1">
+                    <mxGeometry x="2300" y="463.75" width="100" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="72" value="&lt;b&gt;Software Instalation&lt;/b&gt;&lt;b&gt;&amp;nbsp;&lt;/b&gt;&lt;b&gt;Failed&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#BD7000;fillColor=#f0a30a;fontColor=#000000;" parent="1" vertex="1">
+                    <mxGeometry x="2400" y="498.75" width="150" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="74" value="&lt;b&gt;Software Instalation&lt;/b&gt;&lt;b&gt;&amp;nbsp;&lt;/b&gt;&lt;b&gt;Policy&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#6600CC;fillColor=#6600CC;fontColor=#000000;" parent="1" vertex="1">
+                    <mxGeometry x="2470" y="538.75" width="110" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="75" value="&lt;b style=&quot;font-size: 16px;&quot;&gt;Nofity Admin&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#9999FF;fillColor=#9999FF;fontColor=#000000;fontSize=16;" parent="1" vertex="1">
+                    <mxGeometry x="2530" y="588.75" width="120" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="76" value="&lt;b&gt;Email System&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#9673a6;fillColor=#FF66FF;fontColor=#000000;" parent="1" vertex="1">
+                    <mxGeometry x="2600" y="628.75" width="100" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="77" value="&lt;b&gt;Admin Notified&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#BD7000;fillColor=#f0a30a;fontColor=#000000;" parent="1" vertex="1">
+                    <mxGeometry x="2700" y="628.75" width="100" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="79" value="&lt;b&gt;Software Installed in Device&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#BD7000;fillColor=#f0a30a;fontColor=#000000;" parent="1" vertex="1">
+                    <mxGeometry x="2400" y="438.75" width="170" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="80" value="&lt;b&gt;Physical Device&lt;/b&gt;&lt;b&gt;&amp;nbsp;ID&lt;br&gt;&lt;/b&gt;&lt;b&gt;Physical Device&lt;/b&gt;&lt;b&gt;&amp;nbsp;Details&lt;br&gt;&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#99FF99;fillColor=#99FF99;fontColor=#000000;" parent="1" vertex="1">
+                    <mxGeometry x="2800" y="622.5" width="140" height="52.5" as="geometry"/>
+                </mxCell>
+                <mxCell id="81" value="&lt;b style=&quot;font-size: 16px;&quot;&gt;Deploy Modules&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#9999FF;fillColor=#9999FF;fontColor=#000000;fontSize=16;" parent="1" vertex="1">
+                    <mxGeometry x="2560" y="335" width="150" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="85" value="&lt;b&gt;Physical Device System&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#9673a6;fillColor=#FF66FF;fontColor=#000000;" parent="1" vertex="1">
+                    <mxGeometry x="2710" y="345" width="100" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="86" value="&lt;b&gt;Modules Deployment&lt;/b&gt;&lt;b&gt;&amp;nbsp;&lt;/b&gt;&lt;b&gt;Failed&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#BD7000;fillColor=#f0a30a;fontColor=#000000;" parent="1" vertex="1">
+                    <mxGeometry x="3800" y="225" width="150" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="87" value="&lt;b&gt;Module ID&lt;br&gt;Module Details&lt;br&gt;&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#99FF99;fillColor=#99FF99;fontColor=#000000;" parent="1" vertex="1">
+                    <mxGeometry x="2980" y="362.5" width="100" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="88" value="&lt;b&gt;Module Deploy&lt;/b&gt;&lt;b&gt;&amp;nbsp;&lt;/b&gt;&lt;b&gt;Policy&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#6600CC;fillColor=#6600CC;fontColor=#000000;" parent="1" vertex="1">
+                    <mxGeometry x="3870" y="265" width="110" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="89" value="&lt;b style=&quot;font-size: 16px;&quot;&gt;Nofity Admin&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#9999FF;fillColor=#9999FF;fontColor=#000000;fontSize=16;" parent="1" vertex="1">
+                    <mxGeometry x="3930" y="315" width="120" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="90" value="&lt;b&gt;Email System&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#9673a6;fillColor=#FF66FF;fontColor=#000000;" parent="1" vertex="1">
+                    <mxGeometry x="4000" y="355" width="100" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="91" value="&lt;b&gt;Admin Notified&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#BD7000;fillColor=#f0a30a;fontColor=#000000;" parent="1" vertex="1">
+                    <mxGeometry x="4100" y="355" width="100" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="94" value="&lt;b&gt;IoTDevice ID&lt;br&gt;&lt;/b&gt;&lt;b&gt;IoTDevice&lt;/b&gt;&lt;b&gt;&amp;nbsp;Details&lt;br&gt;&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#99FF99;fillColor=#99FF99;fontColor=#000000;" parent="1" vertex="1">
+                    <mxGeometry x="2390" y="755" width="110" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="97" value="&lt;b&gt;Modules Gathered&lt;/b&gt;&lt;b&gt;&amp;nbsp;&lt;/b&gt;&lt;b&gt;Policy&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#6600CC;fillColor=#6600CC;fontColor=#000000;" parent="1" vertex="1">
+                    <mxGeometry x="2950" y="295" width="110" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="98" value="&lt;b&gt;Manifest Prepared&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#BD7000;fillColor=#f0a30a;fontColor=#000000;" parent="1" vertex="1">
+                    <mxGeometry x="3310" y="240" width="170" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="99" value="&lt;b style=&quot;font-size: 16px;&quot;&gt;Create Deploy&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#9999FF;fillColor=#9999FF;fontColor=#000000;fontSize=16;" parent="1" vertex="1">
+                    <mxGeometry x="3060" y="260" width="150" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="100" value="&lt;b&gt;Physical Device System&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#9673a6;fillColor=#FF66FF;fontColor=#000000;" parent="1" vertex="1">
+                    <mxGeometry x="3210" y="270" width="100" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="101" value="&lt;b&gt;Manifest Prepared&lt;/b&gt;&lt;b&gt;&amp;nbsp;&lt;/b&gt;&lt;b&gt;Policy&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#6600CC;fillColor=#6600CC;fontColor=#000000;" parent="1" vertex="1">
+                    <mxGeometry x="3440" y="190" width="110" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="102" value="&lt;b style=&quot;font-size: 16px;&quot;&gt;Trigger Deploy&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#9999FF;fillColor=#9999FF;fontColor=#000000;fontSize=16;" parent="1" vertex="1">
+                    <mxGeometry x="3550" y="185" width="150" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="103" value="&lt;b&gt;IoT Hub&lt;br&gt;System&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#9673a6;fillColor=#FF66FF;fontColor=#000000;" parent="1" vertex="1">
+                    <mxGeometry x="3700" y="195" width="100" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="104" value="&lt;b&gt;Onboard Policy&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#6600CC;fillColor=#6600CC;fontColor=#000000;" parent="1" vertex="1">
+                    <mxGeometry x="1250" y="695" width="90" height="65" as="geometry"/>
+                </mxCell>
+                <mxCell id="105" value="&lt;b&gt;Onboard ID&lt;br&gt;Onboard Details&lt;br&gt;&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#99FF99;fillColor=#99FF99;fontColor=#000000;" parent="1" vertex="1">
+                    <mxGeometry x="1740" y="692.5" width="100" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="106" value="&lt;b&gt;StartUp Script Policy&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#6600CC;fillColor=#6600CC;fontColor=#000000;" parent="1" vertex="1">
+                    <mxGeometry x="1680" y="642.5" width="90" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="107" value="&lt;b&gt;Device Creation in IoTHub&amp;nbsp;&lt;/b&gt;&lt;b&gt;Policy&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#6600CC;fillColor=#6600CC;fontColor=#000000;" parent="1" vertex="1">
+                    <mxGeometry x="2070" y="510" width="110" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="109" value="&lt;b&gt;Physical Device&lt;/b&gt;&lt;b&gt;&amp;nbsp;ID&lt;br&gt;&lt;/b&gt;&lt;b&gt;Physical Device&lt;/b&gt;&lt;b&gt;&amp;nbsp;Details&lt;br&gt;&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#99FF99;fillColor=#99FF99;fontColor=#000000;" parent="1" vertex="1">
+                    <mxGeometry x="2570" y="438.75" width="140" height="52.5" as="geometry"/>
+                </mxCell>
+                <mxCell id="110" value="&lt;b&gt;Software Instalation&lt;/b&gt;&lt;b&gt;&amp;nbsp;&lt;/b&gt;&lt;b&gt;Policy&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#6600CC;fillColor=#6600CC;fontColor=#000000;" parent="1" vertex="1">
+                    <mxGeometry x="2500" y="388.75" width="110" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="111" value="&lt;b&gt;Modules Deployed&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#BD7000;fillColor=#f0a30a;fontColor=#000000;" parent="1" vertex="1">
+                    <mxGeometry x="3800" y="160" width="170" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="112" value="&lt;b&gt;Deploy ID&lt;br&gt;&lt;/b&gt;&lt;b&gt;Deploy&lt;/b&gt;&lt;b&gt;&amp;nbsp;Details&lt;br&gt;&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#99FF99;fillColor=#99FF99;fontColor=#000000;" parent="1" vertex="1">
+                    <mxGeometry x="3970" y="160" width="100" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="113" value="&lt;b&gt;Deploy ID&lt;br&gt;&lt;/b&gt;&lt;b&gt;Deploy&lt;/b&gt;&lt;b&gt;&amp;nbsp;Details&lt;br&gt;&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#99FF99;fillColor=#99FF99;fontColor=#000000;" parent="1" vertex="1">
+                    <mxGeometry x="4200" y="355" width="100" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="114" value="&lt;b style=&quot;font-size: 16px;&quot;&gt;Saves Details&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#9999FF;fillColor=#9999FF;fontColor=#000000;fontSize=16;" parent="1" vertex="1">
+                    <mxGeometry x="4070" y="150" width="150" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="115" value="&lt;b&gt;Physical Device System&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#9673a6;fillColor=#FF66FF;fontColor=#000000;" parent="1" vertex="1">
+                    <mxGeometry x="4220" y="160" width="100" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="116" value="&lt;b&gt;Onboard&lt;/b&gt;&lt;b&gt;&amp;nbsp;&lt;/b&gt;&lt;b&gt;Policy&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#6600CC;fillColor=#6600CC;fontColor=#000000;" parent="1" vertex="1">
+                    <mxGeometry x="4510" y="160" width="110" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="117" value="&lt;b style=&quot;font-size: 16px;&quot;&gt;Notify Admin&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#9999FF;fillColor=#9999FF;fontColor=#000000;fontSize=16;" parent="1" vertex="1">
+                    <mxGeometry x="4570" y="210" width="120" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="118" value="&lt;b&gt;Email System&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#9673a6;fillColor=#FF66FF;fontColor=#000000;" parent="1" vertex="1">
+                    <mxGeometry x="4640" y="250" width="100" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="119" value="&lt;b&gt;Admin Notified&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#BD7000;fillColor=#f0a30a;fontColor=#000000;" parent="1" vertex="1">
+                    <mxGeometry x="4740" y="250" width="100" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="121" value="&lt;b&gt;Physical Device&lt;/b&gt;&lt;b&gt;&amp;nbsp;ID&lt;br&gt;&lt;/b&gt;&lt;b&gt;Physical Device&lt;/b&gt;&lt;b&gt;&amp;nbsp;Details&lt;br&gt;&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#99FF99;fillColor=#99FF99;fontColor=#000000;" parent="1" vertex="1">
+                    <mxGeometry x="4840" y="243.75" width="140" height="52.5" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>

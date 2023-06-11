@@ -1,28 +1,28 @@
-
 namespace CADDD.Domain.Common.Models;
 
 public abstract class ValueObject : IEquatable<ValueObject>
 {
-    protected static bool EqualOperator(ValueObject left, ValueObject right)
+    public static bool operator ==(ValueObject one, ValueObject two) => EqualOperator(one, two);
+
+    public static bool operator !=(ValueObject one, ValueObject two) => NotEqualOperator(one, two);
+
+    public bool Equals(ValueObject? other)
     {
-        if (left is null ^ right is null)
-        {
-            return false;
-        }
-        return ReferenceEquals(left, right) || left.Equals(right);
+        return Equals((object?)other);
     }
 
-    protected static bool NotEqualOperator(ValueObject left, ValueObject right)
+    public override int GetHashCode()
     {
-        return !EqualOperator(left, right);
+        return GetEqualityComponents()
+            .Select(x => x?.GetHashCode() ?? 0) // If x is not null, get HashCode OR return 0
+            .Aggregate((x, y) => x ^ y);
     }
-
-    protected abstract IEnumerable<object> GetEqualityComponents();
 
     // Value objects are considered equal if their values are the same;
     public override bool Equals(object? obj)
     {
-        if (obj == null || obj.GetType() != GetType()){
+        if (obj == null || obj.GetType() != GetType())
+        {
             return false;
         }
 
@@ -31,19 +31,15 @@ public abstract class ValueObject : IEquatable<ValueObject>
         return GetEqualityComponents().SequenceEqual(valueObject.GetEqualityComponents());
     }
 
-    public override int GetHashCode()
+    protected static bool EqualOperator(ValueObject left, ValueObject right)
     {
-        return GetEqualityComponents()
-            .Select( x => x?.GetHashCode() ?? 0) // If x is not null, get HashCode OR return 0
-            .Aggregate((x, y) => x ^ y );
+        return !(left is null ^ right is null) && (ReferenceEquals(left, right) || (left is not null && left.Equals(right)));
     }
 
-    public static bool operator ==(ValueObject one, ValueObject two) => EqualOperator(one, two);
-
-    public static bool operator !=(ValueObject one, ValueObject two) => NotEqualOperator(one, two);
-
-    public bool Equals(ValueObject? other)
+    protected static bool NotEqualOperator(ValueObject left, ValueObject right)
     {
-        return Equals( (object?)other );
+        return !EqualOperator(left, right);
     }
+
+    protected abstract IEnumerable<object> GetEqualityComponents();
 }

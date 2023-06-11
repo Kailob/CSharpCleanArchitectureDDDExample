@@ -30,13 +30,13 @@ public class RegisterCommandHandler :
             return Errors.User.DuplicateEmail;
         }
 
-        // Create User (generate unique ID) 
+        // Create User (generate unique ID)
         var user = new User
         {
             FirstName = command.FirstName,
             LastName = command.LastName,
             Email = command.Email,
-            Password = command.Password
+            Password = command.Password,
         };
 
         _userRepository.Add(user);
@@ -47,7 +47,6 @@ public class RegisterCommandHandler :
         // Return
         return new AuthenticationResult(
             user,
-            token
-        );
+            token);
     }
 }

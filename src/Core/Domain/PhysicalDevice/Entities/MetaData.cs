@@ -1,6 +1,3 @@
-
-
-
 using CADDD.Domain.Common.Models;
 using CADDD.Domain.PhysicalDevice.Enums;
 using CADDD.Domain.PhysicalDevice.ValueObjects;
@@ -9,20 +6,14 @@ namespace CADDD.Domain.PhysicalDevice.Entities;
 
 public sealed class MetaData : Entity<MetaDataId>
 {
-    public string MacAddress { get; }
-    public string Ip { get; }
-    public string Username { get; }
-    public string Password { get; }
-    public LinuxOS LinuxOS { get; }
-
     private MetaData(
-        MetaDataId id, 
+        MetaDataId id,
         string macAddress,
         string ip,
         string username,
         string password,
-        LinuxOS linuxOS
-    ) : base(id)
+        LinuxOS linuxOS)
+        : base(id)
     {
         MacAddress = macAddress;
         Ip = ip;
@@ -31,13 +22,22 @@ public sealed class MetaData : Entity<MetaDataId>
         LinuxOS = linuxOS;
     }
 
+    public string MacAddress { get; }
+
+    public string Ip { get; }
+
+    public string Username { get; }
+
+    public string Password { get; }
+
+    public LinuxOS LinuxOS { get; }
+
     public static MetaData Create(
         string macAddress,
         string ip,
         string username,
         string password,
-        LinuxOS linuxOS
-    )
+        LinuxOS linuxOS)
     {
         return new(
             MetaDataId.CreateUnique(),
@@ -45,8 +45,6 @@ public sealed class MetaData : Entity<MetaDataId>
             ip,
             username,
             password,
-            linuxOS
-        );
-        
+            linuxOS);
     }
 }
