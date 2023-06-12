@@ -1,4 +1,5 @@
 ﻿using CADDD.Application.Common.Interfaces.Errors;
+
 using Microsoft.AspNetCore.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
 
@@ -19,7 +20,6 @@ public class ErrorsController : ApiController
 
         return Problem(
             title: message,
-            statusCode: statusCode
-        );
+            statusCode: statusCode);
     }
 }

@@ -1,6 +1,8 @@
-﻿using ErrorOr;
+﻿using CADDD.WebAPI.Common.Http;
+
+using ErrorOr;
+
 using Microsoft.AspNetCore.Mvc;
-using CADDD.WebAPI.Common.Http;
 using Microsoft.AspNetCore.Mvc.ModelBinding;
 
 namespace CADDD.WebAPI.Controllers;
@@ -37,8 +39,7 @@ public class ApiController : ControllerBase
 
         return Problem(
             statusCode: statusCode,
-            title: error.Description
-        );
+            title: error.Description);
     }
 
     private IActionResult ValidationProblem(List<Error> errors)
@@ -48,9 +49,9 @@ public class ApiController : ControllerBase
         {
             modelStateDictionary.AddModelError(
                 error.Code,
-                error.Description
-            );
+                error.Description);
         }
+
         return ValidationProblem(modelStateDictionary);
     }
 }

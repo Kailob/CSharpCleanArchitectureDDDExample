@@ -11,6 +11,7 @@ public class JwtSettingsSetup : IConfigureOptions<JwtSettings>
     {
         _configuration = configuration;
     }
+
     public void Configure(JwtSettings options)
     {
         _configuration

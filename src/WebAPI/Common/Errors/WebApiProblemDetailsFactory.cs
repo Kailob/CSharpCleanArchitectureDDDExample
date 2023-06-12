@@ -1,10 +1,13 @@
-﻿using CADDD.WebAPI.Common.Http;
+﻿using System.Diagnostics;
+
+using CADDD.WebAPI.Common.Http;
+
 using ErrorOr;
+
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Infrastructure;
 using Microsoft.AspNetCore.Mvc.ModelBinding;
 using Microsoft.Extensions.Options;
-using System.Diagnostics;
 
 namespace CADDD.WebAPI.Common.Errors;
 
@@ -90,11 +93,9 @@ public class WebApiProblemDetailsFactory : ProblemDetailsFactory
         }
 
         var errors = httpContext?.Items[HttpContextItemKeys.Errors] as List<Error>;
-        if (errors is not null) 
+        if (errors is not null)
         {
-            problemDetails.Extensions.Add("errorCodes", errors.Select(x=>x.Code));
+            problemDetails.Extensions.Add("errorCodes", errors.Select(x => x.Code));
         }
-
-        
     }
 }

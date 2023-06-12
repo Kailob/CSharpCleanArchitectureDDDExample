@@ -1,6 +1,8 @@
-﻿using Mapster;
+﻿using System.Reflection;
+
+using Mapster;
+
 using MapsterMapper;
-using System.Reflection;
 
 namespace CADDD.WebAPI.Common.Mapping;
 
