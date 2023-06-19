@@ -1,6 +1,6 @@
 ﻿using FluentValidation;
 
-namespace CADDD.Application.Authentication.Commands.Register;
+namespace Application.Authentication.Commands.Register;
 
 public class RegisterCommandValidator : AbstractValidator<RegisterCommand>
 {

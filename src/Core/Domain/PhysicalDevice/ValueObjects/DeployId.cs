@@ -1,26 +1,38 @@
-// <copyright file="DeployId.cs" company="PlaceholderCompany">
-// Copyright (c) PlaceholderCompany. All rights reserved.
-// </copyright>
-using CADDD.Domain.Common.Models;
+using Domain.Common.Models;
 
-namespace CADDD.Domain.PhysicalDevice.ValueObjects;
+namespace Domain.PhysicalDevice.ValueObjects;
 
+/// <summary>
+/// DeployId Value Object.
+/// </summary>
 public sealed class DeployId : ValueObject
 {
     private DeployId(Guid value)
     {
-        this.Value = value;
+        Value = value;
     }
 
+    /// <summary>
+    /// Gets value.
+    /// </summary>
+    /// <value>Guid.</value>
     public Guid Value { get; }
 
+    /// <summary>
+    /// Create Unique DeployId.
+    /// </summary>
+    /// <returns>DeployId instance.</returns>
     public static DeployId CreateUnique()
     {
         return new(Guid.NewGuid());
     }
 
+    /// <summary>
+    /// Returns DeployId equality components.
+    /// </summary>
+    /// <returns>IEnumerable object.</returns>
     protected override IEnumerable<object> GetEqualityComponents()
     {
-        yield return this.Value;
+        yield return Value;
     }
 }

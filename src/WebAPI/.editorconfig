@@ -1,0 +1,5 @@
+# Dotnet diagnostic
+[*.{cs,vb}]
+
+# CS1591: Missing XML comment for publicly visible type or member 'Type_or_Member'.
+dotnet_diagnostic.CS1591.severity = none

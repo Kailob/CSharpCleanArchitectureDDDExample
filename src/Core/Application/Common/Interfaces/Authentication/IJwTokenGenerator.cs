@@ -1,6 +1,6 @@
-using CADDD.Domain.Entities;
+using Domain.Entities;
 
-namespace CADDD.Application.Common.Interfaces.Authentication;
+namespace Application.Common.Interfaces.Authentication;
 
 public interface IJwTokenGenerator
 {

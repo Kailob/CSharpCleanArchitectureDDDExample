@@ -1,6 +1,8 @@
-using CADDD.Application;
-using CADDD.Infrastructure;
-using CADDD.WebAPI;
+using Application;
+
+using Infrastructure;
+
+using WebAPI;
 
 var builder = WebApplication.CreateBuilder(args);
 {

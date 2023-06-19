@@ -1,10 +1,10 @@
-// <copyright file="SoftwareId.cs" company="PlaceholderCompany">
-// Copyright (c) PlaceholderCompany. All rights reserved.
-// </copyright>
-using CADDD.Domain.Common.Models;
+using Domain.Common.Models;
 
-namespace CADDD.Domain.PhysicalDevice.ValueObjects;
+namespace Domain.PhysicalDevice.ValueObjects;
 
+/// <summary>
+/// SoftwareId Value Object.
+/// </summary>
 public sealed class SoftwareId : ValueObject
 {
     private SoftwareId(Guid value)
@@ -12,13 +12,22 @@ public sealed class SoftwareId : ValueObject
         Value = value;
     }
 
+    /// <summary>
+    /// Gets value.
+    /// </summary>
+    /// <value>Guid.</value>
     public Guid Value { get; }
 
-    public static SoftwareId CreateUnique()
-    {
-        return new(Guid.NewGuid());
-    }
+    /// <summary>
+    /// Create Unique SoftwareId.
+    /// </summary>
+    /// <returns>SoftwareId instance.</returns>
+    public static SoftwareId CreateUnique() => new(Guid.NewGuid());
 
+    /// <summary>
+    /// Returns TenantId equality components.
+    /// </summary>
+    /// <returns>IEnumerable object.</returns>
     protected override IEnumerable<object> GetEqualityComponents()
     {
         yield return Value;

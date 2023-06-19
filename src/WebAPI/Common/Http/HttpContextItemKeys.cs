@@ -1,4 +1,4 @@
-﻿namespace CADDD.WebAPI.Common.Http;
+﻿namespace WebAPI.Common.Http;
 
 public static class HttpContextItemKeys
 {

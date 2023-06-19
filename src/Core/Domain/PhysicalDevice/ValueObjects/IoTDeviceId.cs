@@ -1,10 +1,10 @@
-// <copyright file="IoTDeviceId.cs" company="PlaceholderCompany">
-// Copyright (c) PlaceholderCompany. All rights reserved.
-// </copyright>
-using CADDD.Domain.Common.Models;
+using Domain.Common.Models;
 
-namespace CADDD.Domain.PhysicalDevice.ValueObjects;
+namespace Domain.PhysicalDevice.ValueObjects;
 
+/// <summary>
+/// IoTDeviceId Value Object.
+/// </summary>
 public sealed class IoTDeviceId : ValueObject
 {
     private IoTDeviceId(Guid value)
@@ -12,13 +12,22 @@ public sealed class IoTDeviceId : ValueObject
         Value = value;
     }
 
+    /// <summary>
+    /// Gets value.
+    /// </summary>
+    /// <value>Guid.</value>
     public Guid Value { get; }
 
-    public static IoTDeviceId CreateUnique()
-    {
-        return new(Guid.NewGuid());
-    }
+    /// <summary>
+    /// Create Unique IoTDeviceId.
+    /// </summary>
+    /// <returns>IoTDeviceId instance.</returns>
+    public static IoTDeviceId CreateUnique() => new(Guid.NewGuid());
 
+    /// <summary>
+    /// Returns IoTDeviceId equality components.
+    /// </summary>
+    /// <returns>IEnumerable object.</returns>
     protected override IEnumerable<object> GetEqualityComponents()
     {
         yield return Value;

@@ -1,7 +1,7 @@
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Options;
 
-namespace CADDD.Infrastructure.Authentication;
+namespace Infrastructure.Authentication;
 
 public class JwtSettingsSetup : IConfigureOptions<JwtSettings>
 {

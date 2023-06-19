@@ -1,15 +1,21 @@
-using CADDD.Application.Authentication.Commands.Register;
-using CADDD.Application.Authentication.Common;
-using CADDD.Application.Authentication.Queries.Login;
-using CADDD.Contracts.Authentication;
-using CADDD.Domain.Common.Errors;
+using Application.Authentication.Commands.Register;
+using Application.Authentication.Common;
+using Application.Authentication.Queries.Login;
+
+using Contracts.Authentication;
+
+using Domain.Common.Errors;
+
 using ErrorOr;
+
 using MapsterMapper;
+
 using MediatR;
+
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
-namespace CADDD.WebAPI.Controllers;
+namespace WebAPI.Controllers;
 
 [Route("auth")]
 [AllowAnonymous]

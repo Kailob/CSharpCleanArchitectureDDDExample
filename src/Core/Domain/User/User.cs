@@ -1,12 +1,12 @@
-// <copyright file="User.cs" company="PlaceholderCompany">
-// Copyright (c) PlaceholderCompany. All rights reserved.
-// </copyright>
-using CADDD.Domain.Client.ValueObjects;
-using CADDD.Domain.Common.Models;
-using CADDD.Domain.User.ValueObjects;
+using Domain.Client.ValueObjects;
+using Domain.Common.Models;
+using Domain.User.ValueObjects;
 
-namespace CADDD.Domain.User;
+namespace Domain.User;
 
+/// <summary>
+/// User Aggregate.
+/// </summary>
 public sealed class User : AggregateRoot<UserId>
 {
     private readonly List<ClientId> _clientIds = new();
@@ -16,12 +16,28 @@ public sealed class User : AggregateRoot<UserId>
     {
     }
 
+    /// <summary>
+    /// Gets User CreateDateTime. Default to DateTime.Now.
+    /// </summary>
+    /// <value>DateTime.</value>
     public DateTime CreatedDateTime { get; } = DateTime.Now;
 
+    /// <summary>
+    /// Gets User UpdateDateTime. Default to DateTime.Now.
+    /// </summary>
+    /// <value>DateTime.</value>
     public DateTime UpdatedDateTime { get; } = DateTime.Now;
 
+    /// <summary>
+    /// Gets List of Client Ids.
+    /// </summary>
+    /// <returns>IReadOnlyList.</returns>
     public IReadOnlyList<ClientId> ClientIds => _clientIds.AsReadOnly();
 
+    /// <summary>
+    /// Create a new User Aggregate.
+    /// </summary>
+    /// <returns>User Aggregate.</returns>
     public static User Create()
     {
         return new(UserId.CreateUnique());

@@ -1,10 +1,12 @@
-﻿using CADDD.Application.Authentication.Commands.Register;
-using CADDD.Application.Authentication.Common;
-using CADDD.Application.Authentication.Queries.Login;
-using CADDD.Contracts.Authentication;
+﻿using Application.Authentication.Commands.Register;
+using Application.Authentication.Common;
+using Application.Authentication.Queries.Login;
+
+using Contracts.Authentication;
+
 using Mapster;
 
-namespace CADDD.WebAPI.Common.Mapping;
+namespace WebAPI.Common.Mapping;
 
 public class AuthenticationMappingConfig : IRegister
 {

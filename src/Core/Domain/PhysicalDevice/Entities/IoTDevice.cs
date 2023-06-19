@@ -1,8 +1,8 @@
-using CADDD.Domain.Common.Enums;
-using CADDD.Domain.Common.Models;
-using CADDD.Domain.PhysicalDevice.ValueObjects;
+using Domain.Common.Enums;
+using Domain.Common.Models;
+using Domain.PhysicalDevice.ValueObjects;
 
-namespace CADDD.Domain.PhysicalDevice.Entities;
+namespace Domain.PhysicalDevice.Entities;
 
 public sealed class IoTDevice : Entity<IoTDeviceId>
 {

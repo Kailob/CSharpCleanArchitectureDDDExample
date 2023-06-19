@@ -1,11 +1,11 @@
-﻿using CADDD.WebAPI.Common.Http;
+﻿using WebAPI.Common.Http;
 
 using ErrorOr;
 
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.ModelBinding;
 
-namespace CADDD.WebAPI.Controllers;
+namespace WebAPI.Controllers;
 
 [ApiController]
 public class ApiController : ControllerBase
@@ -51,7 +51,6 @@ public class ApiController : ControllerBase
                 error.Code,
                 error.Description);
         }
-
         return ValidationProblem(modelStateDictionary);
     }
 }

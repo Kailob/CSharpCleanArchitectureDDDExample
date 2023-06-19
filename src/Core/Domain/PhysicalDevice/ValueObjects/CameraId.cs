@@ -1,10 +1,10 @@
-// <copyright file="CameraId.cs" company="PlaceholderCompany">
-// Copyright (c) PlaceholderCompany. All rights reserved.
-// </copyright>
-using CADDD.Domain.Common.Models;
+using Domain.Common.Models;
 
-namespace CADDD.Domain.PhysicalDevice.ValueObjects;
+namespace Domain.PhysicalDevice.ValueObjects;
 
+/// <summary>
+/// CameraId Value Object.
+/// </summary>
 public sealed class CameraId : ValueObject
 {
     private CameraId(Guid value)
@@ -12,15 +12,27 @@ public sealed class CameraId : ValueObject
         Value = value;
     }
 
+    /// <summary>
+    /// Gets value.
+    /// </summary>
+    /// <value>Guid.</value>
     public Guid Value { get; }
 
+    /// <summary>
+    /// Create Unique CameraId.
+    /// </summary>
+    /// <returns>CameraId instance.</returns>
     public static CameraId CreateUnique()
     {
         return new(Guid.NewGuid());
     }
 
+    /// <summary>
+    /// Returns CameraId equality components.
+    /// </summary>
+    /// <returns>IEnumerable object.</returns>
     protected override IEnumerable<object> GetEqualityComponents()
     {
-        yield return this.Value;
+        yield return Value;
     }
 }

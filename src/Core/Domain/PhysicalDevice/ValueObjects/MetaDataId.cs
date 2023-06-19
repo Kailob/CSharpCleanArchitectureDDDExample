@@ -1,10 +1,10 @@
-// <copyright file="MetaDataId.cs" company="PlaceholderCompany">
-// Copyright (c) PlaceholderCompany. All rights reserved.
-// </copyright>
-using CADDD.Domain.Common.Models;
+using Domain.Common.Models;
 
-namespace CADDD.Domain.PhysicalDevice.ValueObjects;
+namespace Domain.PhysicalDevice.ValueObjects;
 
+/// <summary>
+/// MetaDataId Id value object.
+/// </summary>
 public sealed class MetaDataId : ValueObject
 {
     private MetaDataId(Guid value)
@@ -12,13 +12,22 @@ public sealed class MetaDataId : ValueObject
         Value = value;
     }
 
+    /// <summary>
+    /// Gets value.
+    /// </summary>
+    /// <value>Guid.</value>
     public Guid Value { get; }
 
-    public static MetaDataId CreateUnique()
-    {
-        return new(Guid.NewGuid());
-    }
+    /// <summary>
+    /// Create Unique MetaDataId.
+    /// </summary>
+    /// <returns>MetaDataId instance.</returns>
+    public static MetaDataId CreateUnique() => new(Guid.NewGuid());
 
+    /// <summary>
+    /// Returns MetaDataId equality components.
+    /// </summary>
+    /// <returns>IEnumerable object.</returns>
     protected override IEnumerable<object> GetEqualityComponents()
     {
         yield return Value;

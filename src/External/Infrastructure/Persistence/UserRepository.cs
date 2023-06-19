@@ -1,7 +1,8 @@
-﻿using CADDD.Application.Common.Interfaces.Persistence;
-using CADDD.Domain.Entities;
+﻿using Application.Common.Interfaces.Persistence;
 
-namespace CADDD.Infrastructure.Persistence;
+using Domain.Entities;
+
+namespace Infrastructure.Persistence;
 
 public class UserRepository
     : IUserRepository

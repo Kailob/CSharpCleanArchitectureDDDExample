@@ -1,4 +1,4 @@
-namespace CADDD.Application.Common.Interfaces.Services;
+namespace Application.Common.Interfaces.Services;
 
 public interface IDateTimeProvider
 {

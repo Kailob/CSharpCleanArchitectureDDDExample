@@ -1,9 +1,9 @@
-﻿using CADDD.Application.Common.Interfaces.Errors;
+﻿using Application.Common.Interfaces.Errors;
 
 using Microsoft.AspNetCore.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
 
-namespace CADDD.WebAPI.Controllers;
+namespace WebAPI.Controllers;
 
 [ApiController]
 public class ErrorsController : ApiController

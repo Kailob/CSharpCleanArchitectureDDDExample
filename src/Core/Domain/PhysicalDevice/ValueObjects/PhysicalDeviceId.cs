@@ -1,10 +1,10 @@
-// <copyright file="PhysicalDeviceId.cs" company="PlaceholderCompany">
-// Copyright (c) PlaceholderCompany. All rights reserved.
-// </copyright>
-using CADDD.Domain.Common.Models;
+using Domain.Common.Models;
 
-namespace CADDD.Domain.PhysicalDevice.ValueObjects;
+namespace Domain.PhysicalDevice.ValueObjects;
 
+/// <summary>
+/// Physical DeviceId value object.
+/// </summary>
 public sealed class PhysicalDeviceId : ValueObject
 {
     private PhysicalDeviceId(Guid value)
@@ -12,13 +12,22 @@ public sealed class PhysicalDeviceId : ValueObject
         Value = value;
     }
 
+    /// <summary>
+    /// Gets value.
+    /// </summary>
+    /// <value>Guid.</value>
     public Guid Value { get; }
 
-    public static PhysicalDeviceId CreateUnique()
-    {
-        return new(Guid.NewGuid());
-    }
+    /// <summary>
+    /// Create Unique PhysicalDeviceId.
+    /// </summary>
+    /// <returns>PhysicalDeviceId instance.</returns>
+    public static PhysicalDeviceId CreateUnique() => new(Guid.NewGuid());
 
+    /// <summary>
+    /// Returns PhysicalDeviceId equality components.
+    /// </summary>
+    /// <returns>IEnumerable object.</returns>
     protected override IEnumerable<object> GetEqualityComponents()
     {
         yield return Value;

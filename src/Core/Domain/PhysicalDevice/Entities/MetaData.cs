@@ -1,8 +1,8 @@
-using CADDD.Domain.Common.Models;
-using CADDD.Domain.PhysicalDevice.Enums;
-using CADDD.Domain.PhysicalDevice.ValueObjects;
+using Domain.Common.Models;
+using Domain.PhysicalDevice.Enums;
+using Domain.PhysicalDevice.ValueObjects;
 
-namespace CADDD.Domain.PhysicalDevice.Entities;
+namespace Domain.PhysicalDevice.Entities;
 
 public sealed class MetaData : Entity<MetaDataId>
 {

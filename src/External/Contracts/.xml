@@ -1,0 +1,52 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Contracts</name>
+    </assembly>
+    <members>
+        <member name="T:Contracts.PhysicalDevice.CreateRequest">
+            <summary>
+            Physical Device Create Request Object
+            </summary>
+            <param name="Name"></param>
+            <param name="Description"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Contracts.PhysicalDevice.CreateRequest.#ctor(System.String,System.String)">
+            <summary>
+            Physical Device Create Request Object
+            </summary>
+            <param name="Name"></param>
+            <param name="Description"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Contracts.PhysicalDevice.CreateRequest.Name">
+            <summary></summary>
+        </member>
+        <member name="P:Contracts.PhysicalDevice.CreateRequest.Description">
+            <summary></summary>
+        </member>
+        <member name="T:Contracts.PhysicalDevice.CreateResponse">
+            <summary>
+            Create Physical Device Response
+            </summary>
+            <param name="Id">ID</param>
+            <param name="Name">Name</param>
+            <returns>CreateResponse Instance.</returns>
+        </member>
+        <member name="M:Contracts.PhysicalDevice.CreateResponse.#ctor(System.Guid,System.String)">
+            <summary>
+            Create Physical Device Response
+            </summary>
+            <param name="Id">ID</param>
+            <param name="Name">Name</param>
+            <returns>CreateResponse Instance.</returns>
+        </member>
+        <member name="P:Contracts.PhysicalDevice.CreateResponse.Id">
+            <summary>ID</summary>
+        </member>
+        <member name="P:Contracts.PhysicalDevice.CreateResponse.Name">
+            <summary>Name</summary>
+        </member>
+    </members>
+</doc>

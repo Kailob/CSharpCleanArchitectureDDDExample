@@ -1,10 +1,10 @@
-// <copyright file="UserId.cs" company="PlaceholderCompany">
-// Copyright (c) PlaceholderCompany. All rights reserved.
-// </copyright>
-using CADDD.Domain.Common.Models;
+using Domain.Common.Models;
 
-namespace CADDD.Domain.User.ValueObjects;
+namespace Domain.User.ValueObjects;
 
+/// <summary>
+/// UserID Value Object.
+/// </summary>
 public sealed class UserId : ValueObject
 {
     private UserId(Guid value)
@@ -12,13 +12,25 @@ public sealed class UserId : ValueObject
         Value = value;
     }
 
+    /// <summary>
+    /// Gets UserID Value.
+    /// </summary>
+    /// <value>GUID.</value>
     public Guid Value { get; }
 
+    /// <summary>
+    /// Create Unique UserID.
+    /// </summary>
+    /// <returns>UserId.</returns>
     public static UserId CreateUnique()
     {
         return new(Guid.NewGuid());
     }
 
+    /// <summary>
+    /// Yield return Value.
+    /// </summary>
+    /// <returns>IEnumerable object.</returns>
     protected override IEnumerable<object> GetEqualityComponents()
     {
         yield return Value;

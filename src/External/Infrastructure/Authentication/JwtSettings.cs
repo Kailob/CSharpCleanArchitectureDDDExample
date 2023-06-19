@@ -1,4 +1,4 @@
-namespace CADDD.Infrastructure.Authentication;
+namespace Infrastructure.Authentication;
 
 public class JwtSettings
 {

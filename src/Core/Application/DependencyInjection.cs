@@ -1,12 +1,16 @@
-using CADDD.Application.Authentication.Commands.Register;
-using CADDD.Application.Authentication.Common;
-using CADDD.Application.Common.Behaviors;
+using Application.Authentication.Commands.Register;
+using Application.Authentication.Common;
+using Application.Common.Behaviors;
+
 using ErrorOr;
+
 using FluentValidation;
+
 using MediatR;
+
 using Microsoft.Extensions.DependencyInjection;
 
-namespace CADDD.Application;
+namespace Application;
 
 public static class DependencyInjection
 {

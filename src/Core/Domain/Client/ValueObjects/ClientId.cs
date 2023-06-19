@@ -1,6 +1,6 @@
-using CADDD.Domain.Common.Models;
+using Domain.Common.Models;
 
-namespace CADDD.Domain.Client.ValueObjects;
+namespace Domain.Client.ValueObjects;
 
 public sealed class ClientId : ValueObject
 {

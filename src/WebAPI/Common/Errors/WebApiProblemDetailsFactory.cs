@@ -1,6 +1,6 @@
 ﻿using System.Diagnostics;
 
-using CADDD.WebAPI.Common.Http;
+using WebAPI.Common.Http;
 
 using ErrorOr;
 
@@ -9,7 +9,7 @@ using Microsoft.AspNetCore.Mvc.Infrastructure;
 using Microsoft.AspNetCore.Mvc.ModelBinding;
 using Microsoft.Extensions.Options;
 
-namespace CADDD.WebAPI.Common.Errors;
+namespace WebAPI.Common.Errors;
 
 public class WebApiProblemDetailsFactory : ProblemDetailsFactory
 {

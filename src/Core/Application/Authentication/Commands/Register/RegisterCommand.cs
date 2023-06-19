@@ -1,8 +1,10 @@
-﻿using CADDD.Application.Authentication.Common;
+﻿using Application.Authentication.Common;
+
 using ErrorOr;
+
 using MediatR;
 
-namespace CADDD.Application.Authentication.Commands.Register;
+namespace Application.Authentication.Commands.Register;
 
 public record RegisterCommand(
     string FirstName,

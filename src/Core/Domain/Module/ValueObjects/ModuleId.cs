@@ -1,6 +1,6 @@
-using CADDD.Domain.Common.Models;
+using Domain.Common.Models;
 
-namespace CADDD.Domain.Module.ValueObjects;
+namespace Domain.Module.ValueObjects;
 
 public sealed class ModuleId : ValueObject
 {
@@ -18,6 +18,6 @@ public sealed class ModuleId : ValueObject
 
     protected override IEnumerable<object> GetEqualityComponents()
     {
-       yield return Value;
+        yield return Value;
     }
 }

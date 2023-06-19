@@ -1,6 +1,6 @@
 ﻿using System.Net;
 
-namespace CADDD.Application.Common.Interfaces.Errors;
+namespace Application.Common.Interfaces.Errors;
 
 public interface IServiceException
 {

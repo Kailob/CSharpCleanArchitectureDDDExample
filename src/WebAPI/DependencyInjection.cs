@@ -1,8 +1,8 @@
-using CADDD.WebAPI.Common.Errors;
-using CADDD.WebAPI.Common.Mapping;
+using WebAPI.Common.Errors;
+using WebAPI.Common.Mapping;
 using Microsoft.AspNetCore.Mvc.Infrastructure;
 
-namespace CADDD.WebAPI;
+namespace WebAPI;
 
 public static class DependencyInjection
 {

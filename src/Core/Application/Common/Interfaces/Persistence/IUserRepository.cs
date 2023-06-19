@@ -1,6 +1,6 @@
-﻿using CADDD.Domain.Entities;
+﻿using Domain.Entities;
 
-namespace CADDD.Application.Common.Interfaces.Persistence;
+namespace Application.Common.Interfaces.Persistence;
 
 public interface IUserRepository
 {

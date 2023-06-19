@@ -1,6 +1,6 @@
 using System.ComponentModel;
 
-namespace CADDD.Domain.Common.Enums;
+namespace Domain.Common.Enums;
 
 public enum EntityStatus
 {

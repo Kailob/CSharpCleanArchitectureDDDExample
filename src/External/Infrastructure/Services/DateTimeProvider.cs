@@ -1,6 +1,6 @@
-using CADDD.Application.Common.Interfaces.Services;
+using Application.Common.Interfaces.Services;
 
-namespace CADDD.Infrastructure.Services;
+namespace Infrastructure.Services;
 
 public class DateTimeProvider
 : IDateTimeProvider

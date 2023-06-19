@@ -1,6 +1,6 @@
-using CADDD.Domain.Common.Models;
+using Domain.Common.Models;
 
-namespace CADDD.Domain.Admin.ValueObjects;
+namespace Domain.Admin.ValueObjects;
 
 public sealed class AdminId : ValueObject
 {

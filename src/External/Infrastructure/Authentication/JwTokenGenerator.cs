@@ -2,14 +2,15 @@ using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using System.Text;
 
-using CADDD.Application.Common.Interfaces.Authentication;
-using CADDD.Application.Common.Interfaces.Services;
-using CADDD.Domain.Entities;
+using Application.Common.Interfaces.Authentication;
+using Application.Common.Interfaces.Services;
+
+using Domain.Entities;
 
 using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Tokens;
 
-namespace CADDD.Infrastructure.Authentication;
+namespace Infrastructure.Authentication;
 
 public class JwTokenGenerator
     : IJwTokenGenerator

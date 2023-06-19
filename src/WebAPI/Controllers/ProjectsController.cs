@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
-namespace CADDD.WebAPI.Controllers;
+namespace WebAPI.Controllers;
 
 [Route("[controller]")]
 [Authorize]

@@ -1,6 +1,6 @@
 ﻿using ErrorOr;
 
-namespace CADDD.Domain.Common.Errors;
+namespace Domain.Common.Errors;
 
 public static partial class Errors
 {

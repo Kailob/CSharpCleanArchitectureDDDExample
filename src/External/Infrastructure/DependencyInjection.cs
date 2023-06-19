@@ -1,11 +1,12 @@
 using System.Text;
 
-using CADDD.Application.Common.Interfaces.Authentication;
-using CADDD.Application.Common.Interfaces.Persistence;
-using CADDD.Application.Common.Interfaces.Services;
-using CADDD.Infrastructure.Authentication;
-using CADDD.Infrastructure.Persistence;
-using CADDD.Infrastructure.Services;
+using Application.Common.Interfaces.Authentication;
+using Application.Common.Interfaces.Persistence;
+using Application.Common.Interfaces.Services;
+
+using Infrastructure.Authentication;
+using Infrastructure.Persistence;
+using Infrastructure.Services;
 
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.Extensions.Configuration;
@@ -13,10 +14,19 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Tokens;
 
-namespace CADDD.Infrastructure;
+namespace Infrastructure;
 
+/// <summary>
+/// Infrastructure Dependency Injection.
+/// </summary>
 public static class DependencyInjection
 {
+    /// <summary>
+    /// Add Infrastructure services.
+    /// </summary>
+    /// <param name="services">IServiceCollection.</param>
+    /// <param name="configuration">IConfiguration.</param>
+    /// <returns>services.</returns>
     public static IServiceCollection AddInfrastructure(
         this IServiceCollection services,
         IConfiguration configuration)
@@ -28,6 +38,12 @@ public static class DependencyInjection
         return services;
     }
 
+    /// <summary>
+    /// Add Authentication services.
+    /// </summary>
+    /// <param name="services">IServiceCollection.</param>
+    /// <param name="configuration">IConfiguration.</param>
+    /// <returns>services.</returns>
     public static IServiceCollection AddAuth(
         this IServiceCollection services,
         IConfiguration configuration)

@@ -1,7 +1,6 @@
-﻿using CADDD.Application.Authentication.Queries.Login;
-using FluentValidation;
+﻿using FluentValidation;
 
-namespace CADDD.Application.Authentication.Commands.Login;
+namespace Application.Authentication.Queries.Login;
 
 public class LoginQueryValidator : AbstractValidator<LoginQuery>
 {

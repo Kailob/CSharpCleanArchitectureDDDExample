@@ -1,13 +1,13 @@
-// <copyright file="Software.cs" company="PlaceholderCompany">
-// Copyright (c) PlaceholderCompany. All rights reserved.
-// </copyright>
-using CADDD.Domain.Common.Enums;
-using CADDD.Domain.Common.Models;
-using CADDD.Domain.PhysicalDevice.Enums;
-using CADDD.Domain.PhysicalDevice.ValueObjects;
+using Domain.Common.Enums;
+using Domain.Common.Models;
+using Domain.PhysicalDevice.Enums;
+using Domain.PhysicalDevice.ValueObjects;
 
-namespace CADDD.Domain.PhysicalDevice.Entities;
+namespace Domain.PhysicalDevice.Entities;
 
+/// <summary>
+/// Software installation.
+/// </summary>
 public sealed class Software : Entity<SoftwareId>
 {
     private Software(
@@ -20,14 +20,36 @@ public sealed class Software : Entity<SoftwareId>
         Status = status;
     }
 
+    /// <summary>
+    /// Gets software installation log.
+    /// </summary>
+    /// <value>string.</value>
     public string Log { get; }
 
+    /// <summary>
+    /// Gets Software execution status.
+    /// </summary>
+    /// <value>ExecutionStatus.</value>
     public ExecutionStatus Status { get; }
 
+    /// <summary>
+    /// Gets Software Created Date Time.
+    /// </summary>
+    /// <value>DateTime.</value>
     public DateTime CreatedDateTime { get; } = DateTime.Now;
 
+    /// <summary>
+    /// Gets Software Updated Date Time.
+    /// </summary>
+    /// <value>DateTime.</value>
     public DateTime UpdatedDateTime { get; } = DateTime.Now;
 
+    /// <summary>
+    /// Create New Software instance.
+    /// </summary>
+    /// <param name="log">Installation Log.</param>
+    /// <param name="status">Execution Status.</param>
+    /// <returns>Software instance.</returns>
     public static Software Create(
         string log,
         ExecutionStatus status)
@@ -39,11 +61,10 @@ public sealed class Software : Entity<SoftwareId>
     }
 
     /// <summary>
-    /// Prepares the clean up scripts
-    /// to unlink the physical device from IoTHub
+    /// Prepares the clean up scripts to unlink the physical device from IoTHub.
     /// </summary>
-    /// <param name="LinuxOS">Device Linux OS</param>
-    /// <returns>List<string></returns>
+    /// <param name="linuxOS">Device Linux OS.</param>
+    /// <returns>List of strings representing O.S. commands.</returns>
     public static List<string> GetCleanUpScripts(LinuxOS linuxOS)
     {
         var scripts = new List<string>();
@@ -99,12 +120,12 @@ public sealed class Software : Entity<SoftwareId>
     }
 
     /// <summary>
-    /// Prepares the instalations scripts based on.
-    /// https://learn.microsoft.com/en-us/azure/iot-edge/how-to-provision-single-device-linux-symmetric?view=iotedge-1.4&tabs=azure-portal%2Crhel
+    /// Prepares the installation scripts based on.
+    /// <![CDATA[ https://learn.microsoft.com/en-us/azure/iot-edge/how-to-provision-single-device-linux-symmetric?view=iotedge-1.4&tabs=azure-portal%2Crhel ]]>
     /// </summary>
-    /// <param name="deviceConnectionString">IoT Device Connection String</param>
-    /// <param name="LinuxOS">Device Linux OS</param>
-    /// <returns>List<string></returns>
+    /// <param name="deviceConnectionString">IoT Device Connection String.</param>
+    /// <param name="linuxOS">Device Linux OS.</param>
+    /// <returns>List of strings representing O.S. commands.</returns>
     public static IReadOnlyList<string> GetInstallScripts(string deviceConnectionString, LinuxOS linuxOS)
     {
         if (string.IsNullOrEmpty(deviceConnectionString))
@@ -196,9 +217,9 @@ public sealed class Software : Entity<SoftwareId>
 
     /// <summary>
     /// Prepares the health check scripts based on.
-    /// https://learn.microsoft.com/en-us/azure/iot-edge/how-to-provision-single-device-linux-symmetric?view=iotedge-1.4&tabs=azure-portal%2Crhel#verify-successful-configuration
+    /// <![CDATA[ https://learn.microsoft.com/en-us/azure/iot-edge/how-to-provision-single-device-linux-symmetric?view=iotedge-1.4&tabs=azure-portal%2Crhel#verify-successful-configuration ]]>
     /// </summary>
-    /// <returns>List<string></returns>
+    /// <returns>List of strings representing O.S. commands.</returns>
     public static List<string> GetHealtCheckScripts()
     {
         var scripts = new List<string>()

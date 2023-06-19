@@ -1,4 +1,4 @@
-﻿namespace CADDD.Domain.Entities;
+﻿namespace Domain.Entities;
 
 public class User
 {

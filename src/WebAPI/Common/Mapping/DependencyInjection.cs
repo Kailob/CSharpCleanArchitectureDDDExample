@@ -4,7 +4,7 @@ using Mapster;
 
 using MapsterMapper;
 
-namespace CADDD.WebAPI.Common.Mapping;
+namespace WebAPI.Common.Mapping;
 
 public static class DependencyInjection
 {

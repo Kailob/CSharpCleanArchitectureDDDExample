@@ -1,12 +1,15 @@
-﻿using CADDD.Application.Authentication.Common;
-using CADDD.Application.Common.Interfaces.Authentication;
-using CADDD.Application.Common.Interfaces.Persistence;
-using CADDD.Domain.Common.Errors;
-using CADDD.Domain.Entities;
+﻿using Application.Authentication.Common;
+using Application.Common.Interfaces.Authentication;
+using Application.Common.Interfaces.Persistence;
+
+using Domain.Common.Errors;
+using Domain.Entities;
+
 using ErrorOr;
+
 using MediatR;
 
-namespace CADDD.Application.Authentication.Queries.Login;
+namespace Application.Authentication.Queries.Login;
 
 public class LoginQueryHandler :
     IRequestHandler<LoginQuery, ErrorOr<AuthenticationResult>>
