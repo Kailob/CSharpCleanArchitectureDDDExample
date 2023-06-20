@@ -1,6 +1,6 @@
+using Microsoft.AspNetCore.Mvc.Infrastructure;
 using WebAPI.Common.Errors;
 using WebAPI.Common.Mapping;
-using Microsoft.AspNetCore.Mvc.Infrastructure;
 
 namespace WebAPI;
 

@@ -1,13 +1,10 @@
 ﻿using System.Diagnostics;
-
-using WebAPI.Common.Http;
-
 using ErrorOr;
-
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Infrastructure;
 using Microsoft.AspNetCore.Mvc.ModelBinding;
 using Microsoft.Extensions.Options;
+using WebAPI.Common.Http;
 
 namespace WebAPI.Common.Errors;
 

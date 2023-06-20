@@ -101,19 +101,19 @@ public sealed class PhysicalDevice : AggregateRoot<PhysicalDeviceId>
     public IReadOnlyList<Deploy> Deploys => _deploys.AsReadOnly();
 
     /// <summary>
-    /// Gets Physical Device CreateDateTime. Default to DateTime.Now.
+    /// Gets created date-time. Default to DateTime.Now.
     /// </summary>
     /// <value>DateTime.</value>
     public DateTime CreatedDateTime { get; }
 
     /// <summary>
-    /// Gets Physical Device UpdateDateTime. Default to DateTime.Now.
+    /// Gets updated date-time. Default to DateTime.Now.
     /// </summary>
     /// <value>DateTime.</value>
     public DateTime UpdatedDateTime { get; }
 
     /// <summary>
-    /// Creates new Physical Device instance.
+    /// Initializes a new instance of the <see cref="PhysicalDevice"/> aggregate.
     /// </summary>
     /// <param name="name">Device Name.</param>
     /// <param name="description">Description.</param>

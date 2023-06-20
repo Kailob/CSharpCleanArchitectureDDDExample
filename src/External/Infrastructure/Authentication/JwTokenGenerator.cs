@@ -12,12 +12,20 @@ using Microsoft.IdentityModel.Tokens;
 
 namespace Infrastructure.Authentication;
 
+/// <summary>
+/// JwToken Generator.
+/// </summary>
 public class JwTokenGenerator
     : IJwTokenGenerator
 {
     private readonly JwtSettings _jwtSettings;
     private readonly IDateTimeProvider _dateTime;
 
+    /// <summary>
+    /// Initializes a new instance of the <see cref="JwTokenGenerator"/> class.
+    /// </summary>
+    /// <param name="dateTime">IDateTimeProvider.</param>
+    /// <param name="jwtOptions">IOptions{JwtSettings}.</param>
     public JwTokenGenerator(
         IDateTimeProvider dateTime,
         IOptions<JwtSettings> jwtOptions)
@@ -26,6 +34,11 @@ public class JwTokenGenerator
         _jwtSettings = jwtOptions.Value;
     }
 
+    /// <summary>
+    /// Generate Token.
+    /// </summary>
+    /// <param name="user">User.</param>
+    /// <returns>Token string.</returns>
     public string GenerateToken(User user)
     {
         var signingCredentials = new SigningCredentials(

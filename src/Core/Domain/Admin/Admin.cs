@@ -46,7 +46,7 @@ public sealed class Admin : AggregateRoot<AdminId>
     /// Initializes a new instance of the <see cref="Admin"/> aggregate.
     /// </summary>
     /// <param name="name">Name.</param>
-    /// <param name="description">description.</param>
+    /// <param name="description">Description.</param>
     /// <returns>Admin instance.</returns>
     public static Admin Create(
         string name,

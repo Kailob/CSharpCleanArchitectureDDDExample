@@ -2,8 +2,14 @@
 
 namespace Application.Authentication.Commands.Register;
 
+/// <summary>
+/// Register Command Validator.
+/// </summary>
 public class RegisterCommandValidator : AbstractValidator<RegisterCommand>
 {
+    /// <summary>
+    /// Initializes a new instance of the <see cref="RegisterCommandValidator"/> class.
+    /// </summary>
     public RegisterCommandValidator()
     {
         RuleFor(x => x.FirstName).NotEmpty();

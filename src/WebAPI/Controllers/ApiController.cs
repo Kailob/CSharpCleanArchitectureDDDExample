@@ -1,9 +1,7 @@
-﻿using WebAPI.Common.Http;
-
-using ErrorOr;
-
+﻿using ErrorOr;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.ModelBinding;
+using WebAPI.Common.Http;
 
 namespace WebAPI.Controllers;
 
@@ -51,6 +49,7 @@ public class ApiController : ControllerBase
                 error.Code,
                 error.Description);
         }
+
         return ValidationProblem(modelStateDictionary);
     }
 }
