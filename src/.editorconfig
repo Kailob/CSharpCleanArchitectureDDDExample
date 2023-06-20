@@ -217,11 +217,11 @@ csharp_preserve_single_line_statements = true
 csharp_prefer_braces = when_multiline:warning
 
 
-file_header_template = Licensed to the .NET Foundation under one or more agreements.\nThe .NET Foundation licenses this file to you under the MIT license.\nSee the LICENSE file in the project root for more information.
+# file_header_template = Licensed to the .NET Foundation under one or more agreements.\nThe .NET Foundation licenses this file to you under the MIT license.\nSee the LICENSE file in the project root for more information.
 
 
 # Dotnet diagnostic
-[*.{cs,vb}]
+[*.{cs}]
 
 # StyleCop.Analyzers
 
@@ -265,7 +265,10 @@ dotnet_diagnostic.SA1611.severity = none
 dotnet_diagnostic.SA1615.severity = none
 
 # A C# code file is missing a standard file header.
-dotnet_diagnostic.SA1633.severity = none
+dotnet_diagnostic.SA1633.severity = silent
+
+# IDE1006: Missing Prefix
+dotnet_diagnostic.IDE1006.severity = none
 
 # # IDE0130: Namespace does not match folder structure
 # dotnet_diagnostic.IDE0130.severity = none

@@ -9,8 +9,7 @@ namespace Domain.Module;
 /// </summary>
 public sealed class Module : AggregateRoot<ModuleId>
 {
-    private readonly List<PhysicalDeviceId> _physicalDeviceIds = new();
-
+    // private readonly List<PhysicalDeviceId> _physicalDeviceIds = new();
     private Module(
         ModuleId id,
         string name,

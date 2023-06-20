@@ -10,7 +10,7 @@ namespace Infrastructure.Persistence;
 public class UserRepository
     : IUserRepository
 {
-    private static readonly List<User> _users = new List<User>();
+    private static readonly List<User> _users = new();
 
     /// <summary>
     /// Get User by Email.
