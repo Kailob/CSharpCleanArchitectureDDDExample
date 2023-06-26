@@ -1,0 +1,34 @@
+@host=http://localhost:5078
+@token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI3MDY3Y2YwZi1lMjQ5LTQzYzAtOWRlMS0xMDhjY2M4OGQ0ZjkiLCJnaXZlbl9uYW1lIjoiRmlzdCIsImZhbWlseV9uYW1lIjoiTGFzdCIsImp0aSI6Ijg3YzE1YTllLTc3ZGQtNDY4Yi04NTcyLWZjNWZiYjdkNjI3MCIsImV4cCI6MTY4Nzc5MjkyNCwiaXNzIjoiQ0FEREQiLCJhdWQiOiJDQURERCJ9.dk5bVnKWoqbNRNt0JwZvseiDiGSAgi7swgdzF7fCyCs
+@tenantId=6B29FC40-CA47-1067-B31D-00DD010662DA
+@storeId=6B29FC40-CA47-1067-B31D-00DD010662BA
+
+POST {{host}}/tenants/{{tenantId}}/stores/{{storeId}}/devices
+Content-Type: application/json
+Authorization: Bearer {{token}}
+
+{
+    "name": "Device Name",
+    "description": "Device Description",
+    "status": 0,
+    "metaData": {
+        "macAddress": "96:fa:95:1d:67:4a",
+        "ipAddress": "192.158.1.38",
+        "username": "deviceUserName",
+        "password": "devicepassword",
+        "LinuxOS": 0
+    },
+    "IoTHubDevice": {
+        "name": "IoTHubDeviceName"
+    },
+    "cameras": [
+        {
+            "name": "Camera Name",
+            "description": "Camera Description"
+        },
+        {
+            "name": "Camera Name",
+            "description": "Camera Description"
+        }
+    ]
+}

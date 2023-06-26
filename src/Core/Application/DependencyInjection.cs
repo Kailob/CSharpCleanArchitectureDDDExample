@@ -1,4 +1,4 @@
-using Application.Authentication.Commands.Register;
+﻿using Application.Authentication.Commands.Register;
 using Application.Authentication.Common;
 using Application.Common.Behaviors;
 

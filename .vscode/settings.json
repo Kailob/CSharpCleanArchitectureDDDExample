@@ -1,7 +1,7 @@
 {
     "dotnet.defaultSolution": "CleanArchitectureDDDExample.sln",
     "omnisharp.enableEditorConfigSupport": true,
-    "omnisharp.enableRoslynAnalyzers": true,
+    "omnisharp.enableRoslynAnalyzers": false,
     "files.trimTrailingWhitespace": true,
     "editor.formatOnSave": true,
     "rest-client.environmentVariables": {

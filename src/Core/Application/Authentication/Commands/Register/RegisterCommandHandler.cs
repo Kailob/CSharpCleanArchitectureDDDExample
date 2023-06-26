@@ -1,15 +1,12 @@
-﻿using Application.Authentication.Common;
+﻿namespace Application.Authentication.Commands.Register;
+
+using Application.Authentication.Common;
 using Application.Common.Interfaces.Authentication;
 using Application.Common.Interfaces.Persistence;
-
 using Domain.Common.Errors;
 using Domain.Entities;
-
 using ErrorOr;
-
 using MediatR;
-
-namespace Application.Authentication.Commands.Register;
 
 /// <summary>
 /// Register Command Handlers.
