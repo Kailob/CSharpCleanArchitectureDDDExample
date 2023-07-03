@@ -2,7 +2,7 @@
 
 using Domain.Entities;
 
-namespace Infrastructure.Persistence;
+namespace Infrastructure.Persistence.Repositories;
 
 /// <summary>
 /// User Repository. IUserRepository implementation.

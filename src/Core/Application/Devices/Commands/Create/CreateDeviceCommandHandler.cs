@@ -46,8 +46,7 @@ public class CreateDeviceCommandHandler :
                 request.MetaData.Password,
                 request.MetaData.LinuxOS),
             IoTDevice.Create(
-                request.IoTHubDevice.Name,
-                EntityStatus.Inactive),
+                request.IoTHubDevice.Name),
             request.Cameras.ConvertAll(
                 requestCamera => Camera.Create(requestCamera.Name, requestCamera.Description)));
 

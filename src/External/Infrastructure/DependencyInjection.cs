@@ -1,5 +1,4 @@
-﻿using System.Net.Security;
-using System.Text;
+﻿using System.Text;
 
 using Application.Common.Interfaces.Authentication;
 using Application.Common.Interfaces.Persistence;
@@ -7,9 +6,11 @@ using Application.Common.Interfaces.Services;
 
 using Infrastructure.Authentication;
 using Infrastructure.Persistence;
+using Infrastructure.Persistence.Repositories;
 using Infrastructure.Services;
 
 using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Options;
@@ -49,6 +50,7 @@ public static class DependencyInjection
     public static IServiceCollection AddPersistance(
         this IServiceCollection services)
     {
+        services.AddDbContext<AppDbContext>(options => options.UseSqlServer());
         services.AddScoped<IUserRepository, UserRepository>();
         services.AddScoped<IDeviceRepository, DeviceRepository>();
         return services;

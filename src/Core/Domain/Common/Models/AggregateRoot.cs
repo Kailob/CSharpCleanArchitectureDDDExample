@@ -11,8 +11,18 @@ public abstract class AggregateRoot<TId> : Entity<TId>
     /// Initializes a new instance of the <see cref="AggregateRoot{TId}"/> class.
     /// </summary>
     /// <param name="id">Entity.</param>
-    public AggregateRoot(TId id)
+    protected AggregateRoot(TId id)
     : base(id)
     {
     }
+
+#pragma warning disable CS8618
+    /// <summary>
+    /// Default Constructor.
+    /// </summary>
+    protected AggregateRoot()
+    {
+
+    }
+#pragma warning restore CS8618
 }

@@ -19,6 +19,13 @@ public sealed class DeviceId : ValueObject
     public Guid Value { get; }
 
     /// <summary>
+    /// Create DeviceId.
+    /// </summary>
+    /// <param name="value"></param>
+    /// <returns>DeviceId instance.</returns>
+    public static DeviceId Create(Guid value) => new(value);
+
+    /// <summary>
     /// Create Unique DeviceId.
     /// </summary>
     /// <returns>DeviceId instance.</returns>

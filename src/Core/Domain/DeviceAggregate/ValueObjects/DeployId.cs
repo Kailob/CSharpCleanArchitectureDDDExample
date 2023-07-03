@@ -19,13 +19,17 @@ public sealed class DeployId : ValueObject
     public Guid Value { get; }
 
     /// <summary>
+    /// Create DeployId.
+    /// </summary>
+    /// <param name="value"></param>
+    /// <returns>DeployId instance.</returns>
+    public static DeployId Create(Guid value) => new(value);
+
+    /// <summary>
     /// Create Unique DeployId.
     /// </summary>
     /// <returns>DeployId instance.</returns>
-    public static DeployId CreateUnique()
-    {
-        return new(Guid.NewGuid());
-    }
+    public static DeployId CreateUnique() => new(Guid.NewGuid());
 
     /// <summary>
     /// Returns DeployId equality components.

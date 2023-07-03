@@ -19,13 +19,17 @@ public sealed class CameraId : ValueObject
     public Guid Value { get; }
 
     /// <summary>
+    /// Create CameraId.
+    /// </summary>
+    /// <param name="value"></param>
+    /// <returns>CameraId instance.</returns>
+    public static CameraId Create(Guid value) => new(value);
+
+    /// <summary>
     /// Create Unique CameraId.
     /// </summary>
     /// <returns>CameraId instance.</returns>
-    public static CameraId CreateUnique()
-    {
-        return new(Guid.NewGuid());
-    }
+    public static CameraId CreateUnique() => new(Guid.NewGuid());
 
     /// <summary>
     /// Returns CameraId equality components.

@@ -19,29 +19,39 @@ public sealed class DeviceModule : Entity<DeviceModuleId>
         Variables = variables;
     }
 
+#pragma warning disable CS8618
+    /// <summary>
+    /// Default Constructor.
+    /// </summary>
+    private DeviceModule()
+    {
+
+    }
+#pragma warning restore CS8618
+
     /// <summary>
     /// Gets ModuleId.
     /// </summary>
     /// <value>ModuleId.</value>
-    public ModuleId ModuleId { get; }
+    public ModuleId ModuleId { get; private set; }
 
     /// <summary>
     /// Gets Variables.
     /// </summary>
     /// <value>string.</value>
-    public string Variables { get; }
+    public string Variables { get; private set; }
 
     /// <summary>
     /// Gets created date-time. Default to DateTime.Now.
     /// </summary>
     /// <value>DateTime.</value>
-    public DateTime CreatedDateTime { get; } = DateTime.Now;
+    public DateTime CreatedDateTime { get; private set; } = DateTime.Now;
 
     /// <summary>
     /// Gets updated date-time. Default to DateTime.Now.
     /// </summary>
     /// <value>DateTime.</value>
-    public DateTime UpdatedDateTime { get; } = DateTime.Now;
+    public DateTime UpdatedDateTime { get; private set; } = DateTime.Now;
 
     /// <summary>
     /// Initializes a new instance of the <see cref="DeviceModule"/> entity.

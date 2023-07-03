@@ -25,10 +25,8 @@ public class DeviceMappingConfig : IRegister
 
         // .Map(dest=> dest.Deploys, src => src.DeployIds.Select(deploy));
 
-        config.NewConfig<MetaData, MetaDataResponse>()
-            .Map(dest => dest.Id, source => source.Id.Value);
-        config.NewConfig<IoTDevice, IoTHubDeviceResponse>()
-            .Map(dest => dest.Id, source => source.Id.Value);
+        config.NewConfig<MetaData, MetaDataResponse>();
+        config.NewConfig<IoTDevice, IoTHubDeviceResponse>();
         config.NewConfig<Camera, CameraItemResponse>()
             .Map(dest => dest.Id, source => source.Id.Value);
 

@@ -219,9 +219,14 @@ csharp_prefer_braces = when_multiline:warning
 
 # file_header_template = Licensed to the .NET Foundation under one or more agreements.\nThe .NET Foundation licenses this file to you under the MIT license.\nSee the LICENSE file in the project root for more information.
 
+[*/Migrations/*]
+generated_code = true
 
 # Dotnet diagnostic
 [*.{cs}]
+
+# CS0266: Cannot implicitly convert type 'x' to 'y'
+dotnet_diagnostic.CS0266.severity = none
 
 # StyleCop.Analyzers
 

@@ -12,52 +12,58 @@ public sealed class Software : Entity<SoftwareId>
 {
     private Software(
         SoftwareId id,
-        string log,
-        ExecutionStatus status)
+        string log)
          : base(id)
     {
         Log = log;
-        Status = status;
+        ExecutionStatus = Domain.Common.Enums.ExecutionStatus.Stopped;
     }
+
+#pragma warning disable CS8618
+    /// <summary>
+    /// Default Constructor.
+    /// </summary>
+    private Software()
+    {
+
+    }
+#pragma warning restore CS8618
 
     /// <summary>
     /// Gets software installation log.
     /// </summary>
     /// <value>string.</value>
-    public string Log { get; }
+    public string Log { get; private set; }
 
     /// <summary>
     /// Gets Software execution status.
     /// </summary>
     /// <value>ExecutionStatus.</value>
-    public ExecutionStatus Status { get; }
+    public ExecutionStatus ExecutionStatus { get; private set; }
 
     /// <summary>
     /// Gets Software Created Date Time.
     /// </summary>
     /// <value>DateTime.</value>
-    public DateTime CreatedDateTime { get; } = DateTime.Now;
+    public DateTime CreatedDateTime { get; private set; } = DateTime.Now;
 
     /// <summary>
     /// Gets Software Updated Date Time.
     /// </summary>
     /// <value>DateTime.</value>
-    public DateTime UpdatedDateTime { get; } = DateTime.Now;
+    public DateTime UpdatedDateTime { get; private set; } = DateTime.Now;
 
     /// <summary>
     /// Create New Software instance.
     /// </summary>
     /// <param name="log">Installation Log.</param>
-    /// <param name="status">Execution Status.</param>
     /// <returns>Software instance.</returns>
     public static Software Create(
-        string log,
-        ExecutionStatus status)
+        string log)
     {
         return new(
             SoftwareId.CreateUnique(),
-            log,
-            status);
+            log);
     }
 
     /// <summary>

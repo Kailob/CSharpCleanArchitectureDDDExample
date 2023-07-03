@@ -33,7 +33,6 @@ public record DeviceResponse(
 /// <summary>
 /// Device Meta Data.
 /// </summary>
-/// <param name="Id">Device Id.</param>
 /// <param name="MacAddress">Mac Address.</param>
 /// <param name="IpAddress">Ip Address.</param>
 /// <param name="Username">Username.</param>
@@ -43,7 +42,6 @@ public record DeviceResponse(
 /// <param name="UpdatedDateTime">Updated DateTime.</param>
 /// <returns>MetaDataResponse.</returns>
 public record MetaDataResponse(
-    Guid Id,
     string MacAddress,
     string IpAddress,
     string Username,
@@ -55,12 +53,10 @@ public record MetaDataResponse(
 /// <summary>
 /// IoT Device Data.
 /// </summary>
-/// <param name="Id">Device Id.</param>
 /// <param name="Name">IoT Name.</param>
 /// <param name="CreatedDateTime">Created DateTime.</param>
 /// <returns>IoTHubDevice.</returns>
 public record IoTHubDeviceResponse(
-    Guid Id,
     string Name,
     DateTime CreatedDateTime);
 

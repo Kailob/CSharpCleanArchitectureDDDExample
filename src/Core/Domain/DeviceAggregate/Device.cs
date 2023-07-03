@@ -14,6 +14,7 @@ public sealed class Device : AggregateRoot<DeviceId>
     private readonly List<DeviceModule> _deviceModules = new();
     private readonly List<Camera> _cameras = new();
     private readonly List<Deploy> _deploys = new();
+    private readonly List<Software> _softwareInstallations = new();
 
     private Device(
         DeviceId id,
@@ -35,52 +36,61 @@ public sealed class Device : AggregateRoot<DeviceId>
         MetaData = metaData;
         IoTDevice = iotDevice;
         _cameras = cameras;
-        Software = Software.Create(string.Empty, ExecutionStatus.Stopped);
         CreatedDateTime = createdDateTime;
         UpdatedDateTime = updatedDateTime;
     }
+
+#pragma warning disable CS8618
+    /// <summary>
+    /// Default Constructor.
+    /// </summary>
+    private Device()
+    {
+
+    }
+#pragma warning restore CS8618
 
     /// <summary>
     /// Gets name.
     /// </summary>
     /// <value>string.</value>
-    public string Name { get; }
+    public string Name { get; private set; }
 
     /// <summary>
     /// Gets description.
     /// </summary>
     /// <value>string.</value>
-    public string Description { get; }
+    public string Description { get; private set; }
 
     /// <summary>
     /// Gets entity status.
     /// </summary>
     /// <value>EntityStatus.</value>
-    public EntityStatus Status { get; }
+    public EntityStatus Status { get; private set; }
 
     /// <summary>
     /// Gets StoreId value object.
     /// </summary>
     /// <value>StoreId.</value>
-    public StoreId StoreId { get; }
+    public StoreId StoreId { get; private set; }
 
     /// <summary>
     /// Gets MetaData instance.
     /// </summary>
     /// <value>MetaData.</value>
-    public MetaData MetaData { get; }
+    public MetaData MetaData { get; private set; }
 
     /// <summary>
     /// Gets IoTDevice instance.
     /// </summary>
     /// <value>IoTDevice.</value>
-    public IoTDevice IoTDevice { get; }
+    public IoTDevice IoTDevice { get; private set; }
 
     /// <summary>
-    /// Gets Software instance.
+    /// Gets Software Installs list.
     /// </summary>
     /// <value>Software.</value>
-    public Software Software { get; }
+    public IReadOnlyList<Software> SoftwareInstallations => _softwareInstallations.AsReadOnly();
 
     /// <summary>
     /// Gets Device Modules list.
@@ -104,13 +114,13 @@ public sealed class Device : AggregateRoot<DeviceId>
     /// Gets created date-time. Default to DateTime.Now.
     /// </summary>
     /// <value>DateTime.</value>
-    public DateTime CreatedDateTime { get; }
+    public DateTime CreatedDateTime { get; private set; }
 
     /// <summary>
     /// Gets updated date-time. Default to DateTime.Now.
     /// </summary>
     /// <value>DateTime.</value>
-    public DateTime UpdatedDateTime { get; }
+    public DateTime UpdatedDateTime { get; private set; }
 
     /// <summary>
     /// Initializes a new instance of the <see cref="Device"/> aggregate.

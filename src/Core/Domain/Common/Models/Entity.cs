@@ -88,4 +88,14 @@ public abstract class Entity<TId> : IEquatable<Entity<TId>>
     {
         return !EqualOperator(left, right);
     }
+
+#pragma warning disable CS8618
+    /// <summary>
+    /// Default Constructor.
+    /// </summary>
+    protected Entity()
+    {
+
+    }
+#pragma warning restore CS8618
 }

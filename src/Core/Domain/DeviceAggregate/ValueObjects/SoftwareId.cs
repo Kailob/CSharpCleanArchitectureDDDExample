@@ -19,6 +19,13 @@ public sealed class SoftwareId : ValueObject
     public Guid Value { get; }
 
     /// <summary>
+    /// Create SoftwareId.
+    /// </summary>
+    /// <param name="value"></param>
+    /// <returns>SoftwareId instance.</returns>
+    public static SoftwareId Create(Guid value) => new(value);
+
+    /// <summary>
     /// Create Unique SoftwareId.
     /// </summary>
     /// <returns>SoftwareId instance.</returns>

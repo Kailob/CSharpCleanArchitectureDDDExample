@@ -7,16 +7,14 @@ namespace Domain.DeviceAggregate.Entities;
 /// <summary>
 /// Meta Data Entity.
 /// </summary>
-public sealed class MetaData : Entity<MetaDataId>
+public sealed class MetaData
 {
     private MetaData(
-        MetaDataId id,
         string macAddress,
         string ipAddress,
         string username,
         string password,
         LinuxOS linuxOS)
-        : base(id)
     {
         MacAddress = macAddress;
         IpAddress = ipAddress;
@@ -25,47 +23,45 @@ public sealed class MetaData : Entity<MetaDataId>
         LinuxOS = linuxOS;
     }
 
+#pragma warning disable CS8618
+    /// <summary>
+    /// Default Constructor.
+    /// </summary>
+    private MetaData()
+    {
+
+    }
+#pragma warning restore CS8618
+
     /// <summary>
     /// Gets MacAddress.
     /// </summary>
     /// <value>string.</value>
-    public string MacAddress { get; }
+    public string MacAddress { get; private set; }
 
     /// <summary>
     /// Gets IpAddress.
     /// </summary>
     /// <value>string.</value>
-    public string IpAddress { get; }
+    public string IpAddress { get; private set; }
 
     /// <summary>
     /// Gets Username.
     /// </summary>
     /// <value>string.</value>
-    public string Username { get; }
+    public string Username { get; private set; }
 
     /// <summary>
     /// Gets Password.
     /// </summary>
     /// <value>string.</value>
-    public string Password { get; }
+    public string Password { get; private set; }
 
     /// <summary>
     /// Gets Linux Operative System.
     /// </summary>
     /// <value>LinuxOS.</value>
-    public LinuxOS LinuxOS { get; }
-
-    /// <summary>
-    /// Gets created date-time. Default to DateTime.Now.
-    /// </summary>
-    /// <value>DateTime.</value>
-    public DateTime CreatedDateTime { get; } = DateTime.Now;
-
-    /// <summary>
-    /// Gets updated date-time. Default to DateTime.Now.
-    /// </summary>
-    /// <value>DateTime.</value>
-    public DateTime UpdatedDateTime { get; } = DateTime.Now;
+    public LinuxOS LinuxOS { get; private set; }
 
     /// <summary>
     /// Initializes a new instance of the <see cref="MetaData"/> entity.
@@ -84,7 +80,6 @@ public sealed class MetaData : Entity<MetaDataId>
         LinuxOS linuxOS)
     {
         return new(
-            MetaDataId.CreateUnique(),
             macAddress,
             ipAddress,
             username,
